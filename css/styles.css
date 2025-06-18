@@ -1,0 +1,186 @@
+.active{
+    color: #1E1E1E;
+    background-color: #FEC303;
+    border-radius: 8px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    transition: all 0.3s ease-in-out;
+}
+.inactive{
+    color: #D9D9D9;
+    border-radius: 8px;
+    border: 3px solid #D9D9D9;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-primary{
+    color: #FEC303;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.icon-black{
+    color: black;
+    width: 58px;
+    height: 58px;
+    font-size: 2em;
+}
+
+.banner-main::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1ecb;
+    z-index: 1;
+}
+.banner-text{
+    z-index: 100;
+}
+.border-secondary{
+    border: 3px solid #FEC303;
+    border-radius: 8px;
+}
+.border-tertiary{
+    border: 3px solid #D9D9D9;
+    border-radius: 8px;
+}
+.text-color-primary{
+    color: #FEC303;
+}
+.text-color-secondary{
+    color: #D9D9D9;
+}
+.bg-primary{
+    background-color: #FEC303;
+}
+.bg-black{
+    background-color: #1e1e1e;
+}
+
+.picture-colors{
+   
+}
+.picture-colors img{
+    border: 4px solid #FEC303;
+    border-radius: 16px;
+    height: 256px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+.aventure-section{
+    background-image: url(../images/aventure.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1ecb;
+}
+.week-section{
+    background-image: url(../images/bg-week-1.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1ecb;
+}
+
+.day-active{
+    background-color: #FEC303 !important;
+    transition: all 0.5s ease-in-out;
+}
+.day-active p{
+    overflow: hidden;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.day-inactive{
+    background-color: #FFFFFF !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.day-inactive p{
+
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.border-bottom-color-primary{
+    border-color: #FEC303;
+}
+.bg-primary{
+    background-color: #FEC303;
+}
+
+.legend{
+    background-image: url(../images/bg-legend.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #FEC303cb;
+}
+.bg-hostal{
+    background-image: url(../images/aventure.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1ecb;
+}
+
+.border-section{
+    
+    border-bottom: 8px solid #FEC303;
+}
+
+.bg-coffe{
+    background-image: url(../images/bg-banner-coffee.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #D9D9D9cb;
+}
+.picture-service img{
+    
+    border-radius: 16px;
+    height: 256px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+.stadistics{
+    background-image: url(../images/bg-stadistics.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1efb;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+.no-scrollbar {
+-ms-overflow-style: none;  /* IE y Edge */
+scrollbar-width: none;     /* Firefox */
+}
+
+.bg-gallery{
+    background-image: url(../images/bg-gallery.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1ecb;
+}
+
+#contactForm input[type="text"],
+#contactForm select,
+#contactForm textarea {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #1a1a1a;
+}

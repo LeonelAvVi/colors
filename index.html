@@ -1,0 +1,550 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <style type="text/tailwindcss">     
+            @theme {        --color-clifford: #da373d;      }    
+        </style>
+
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <header class="bg-black shadow fixed top-0 left-0 right-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                <img src="images/logo.webp" alt="Logo" class="h-12 w-auto" />
+                <nav class="space-x-4 hidden md:flex">
+                <a href="#inicio" class="text-color-primary hover:text-blue-600">Inicio</a>
+                <a href="#info" class="text-white hover:text-blue-600">Agencia</a>
+                <a href="#hostal" class="text-white hover:text-blue-600">Hostal</a>
+                <a href="#coffe" class="text-white hover:text-blue-600">Café</a>
+                <a href="#school" class="text-white hover:text-blue-600">Escuela</a>
+                <a href="#activities" class="text-white hover:text-blue-600">Testimonio</a>
+                <a href="#contacto" class="text-black bg-primary py-1 px-4 rounded-full">Contacto/Reserva</a>
+                </nav>
+            </div>
+        </header>
+        <section id="banner-main" class="relative bg-gray-900 text-white py-16 px-6 flex flex-col items-center justify-center min-h-screen lg:px-20 banner-main "
+        style="background-image: url('images/bg-banner-school.webp'); background-size: cover;  border-bottom-color: #FEC303; border-bottom-width: 8px;"
+        >
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center h-full gap-10 ">
+                <!-- Texto e íconos -->
+                <div class="lg:w-1/2 banner-text" id="banner">
+                <!-- Iconos -->
+                    <div class="flex space-x-2 mb-4 flex justify-start items-center z-1000">
+                        <span id="icon-button-school" class="material-symbols-outlined active" onclick="changeService(0)"> school </span>
+                        <span id="icon-button-hostal" class="material-symbols-outlined inactive" onclick="changeService(1)">apartment</span>
+                        <span id="icon-button-agency" class="material-symbols-outlined inactive" onclick="changeService(2)">hiking</span>
+                        <span id="icon-button-coffee" class="material-symbols-outlined inactive" onclick="changeService(3)">local_cafe</span>
+                        
+                    </div>
+
+                    <spam id="description-school" class="" data-aos="fade-left">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center"><span class="mr-2">👨‍🏫</span> Spanish School</h2>
+                        <p class="text-lg text-gray-300">Español práctico, cultura viva, clases dinámicas y un ambiente amigable para aprender, conversar y compartir experiencias reales entre viajeros.</p>
+                    </spam>
+                    <spam id="description-hostal" class="hidden" data-aos="fade-up">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center"><span class="mr-2">👨‍🎓</span> Colors House Hostal</h2>
+                        <p class="text-lg text-gray-300">Disfruta de un ambiente acogedor, habitaciones cómodas y una comunidad vibrante. Ideal para viajeros que buscan un lugar amigable y lleno de color.</p>
+                    </spam>
+                    <spam id="description-coffee" class="hidden" data-aos="fade-up">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center"><span class="mr-2">☕</span> Coffe Colors</h2>
+                        <p class="text-lg text-gray-300">Saborea el mejor café local en un ambiente acogedor. Perfecto para relajarte, estudiar o disfrutar de una buena conversación con amigos.</p>
+                    </spam>
+                    <spam id="description-agency" class="hidden" data-aos="fade-up">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center"><span class="mr-2">🧳</span> Agencia de Viajes</h2>
+                        <p class="text-lg text-gray-300">Explora destinos increíbles con nuestra agencia de viajes. Ofrecemos paquetes personalizados, guías locales y experiencias únicas para que descubras el mundo a tu manera.</p>
+                    </spam>
+                </div>
+
+                <div class="lg:w-1/2 flex flex-col z-10 school-banner">
+                    <img src="images/banner-school.webp" alt="Clase" class="rounded-xl shadow-lg w-2/5 ml-40 -mb-20 border-tertiary" data-aos="fade-right" />
+                    <img src="images/banner-school2.webp" alt="Estudiante" class="rounded-xl shadow-lg w-2/5 z-10 border-secondary" data-aos="fade-up"  />
+                    <img src="images/banner-school3.webp" alt="Grupo" class="rounded-xl shadow-lg w-2/5 ml-32 -mt-16 border-tertiary" data-aos="fade-left" />
+                
+                </div>
+            </div>
+        </section>
+        <section class="bg-white py-16 px-6">
+            <div class="max-w-7xl mx-auto text-center flex flex-col items-center">
+                <p class="text-gray-700 text-lg text-left mb-4 ">Nuestro equipo está compuesto por personas apasionadas por la hospitalidad, los viajes y la cultura. Con calidez, profesionalismo y una sonrisa siempre lista, trabajamos juntos para que cada huésped se sienta bienvenido, acompañado y parte de esta experiencia inolvidable..</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 px-32">
+                    <div class="picture-colors mt-24" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        <img src="images/colors1.webp" alt="Equipo de Clases" class="rounded-xl min-w-full hover:scale-110 transition-transform duration-300 shadow-lg" />
+                        <h3 class="text-xl font-semibold mb-2">Hostel Colors</h3>
+                        
+                    </div>
+                    <div class="picture-colors mt-16" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="up-bottom">
+                        <img src="images/colors2.webp" alt="Equipo de Hostal" class="rounded-xl min-w-full hover:scale-110 transition-transform duration-300 shadow-lg" />
+                        <h3 class="text-xl font-semibold mb-2">Clases Presenciales</h3>
+                    </div>
+                    <div class="picture-colors mt-8" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        <img src="images/colors3.webp" alt="Equipo de Café" class="rounded-xl min-w-full hover:scale-110 transition-transform duration-300 shadow-lg" />
+                        <h3 class="text-xl font-semibold mb-2">Clases Virtuales</h3>
+                    </div>
+                    <div class="picture-colors" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="up-bottom">
+                        <img src="images/colors4.webp" alt="Equipo de Agencia" class="rounded-xl min-w-full hover:scale-110 transition-transform duration-300 shadow-lg" />
+                        <h3 class="text-xl  mb-2">Actividades Semanales</h3>
+                    </div>  
+                </div>  
+            </div>
+        </section>
+        <section id="week" class="week-section bg-gray-100 py-32 px-6 bg-fixed">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center text-color-secondary" data-aos="fade-right"><span class="mr-2">🗓️</span><span class="mr-2 text-color-primary">Cada día, una</span>  aventura diferente</h2>
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-10 mt-8">
+                    <div class="w-1/2 flex flex-col items-start" data-aos="fade-up">
+                        <div id="week-monday" class=" px-4 py-3 mb-2 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-active" onclick="changeWeek(1)">
+                            <span class="text-gray-800 font-bold text-2xl">Lunes: Noche Italiana</span>
+                            <p class="text-gray-300 text-gray-900 text-left">Comienza la semana con sabor: platos de pasta casera acompañados de vino o Fernet en una velada cálida y deliciosa.</p>
+                        </div>
+                        <div id="week-tuesday" class=" px-4 py-3 mb-2 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(2)">
+                            <span class="text-gray-800 font-bold text-xl">Martes: Parlana</span>
+                            <p class="text-gray-300 text-gray-900 text-left">Una noche para practicar idiomas, hacer nuevos amigos y conectar con el mundo sin salir del hostal. ¡Todos los acentos son bienvenidos!</p>
+                        </div>
+                        <div id="week-wednesday" class=" px-4 py-3 mb-2 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer  day-inactive" onclick="changeWeek(3)">
+                            <span class="text-gray-800 font-bold text-xl">Miércoles: Noche Boliviana</span>
+                            <p class="text-gray-300 text-gray-900 text-left">Descubre los sabores y tradiciones de Bolivia con platos típicos, bebidas locales y buena compañía. Cultura en cada bocado.</p>
+                        </div>
+                        <div id="week-thursday" class=" px-4 py-3 mb-2 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(4)">
+                            <span class="text-gray-800 font-bold text-xl">Jueves: Bachata & Peceras</span>
+                            <p class="text-gray-300 text-gray-900 text-left">Aprende a moverte al ritmo de la bachata y disfruta nuestras peceras (tragos grandes para compartir). ¡Ritmo y diversión garantizados!</p>
+                        </div>
+                        <div id="week-friday" class=" px-4 py-3 mb-2 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(5)">
+                            <span class="text-gray-800 font-bold text-xl">Viernes: Karaoke + Ladies Night</span>
+                            <p class="text-gray-300 text-gray-900 text-left">Canta tus canciones favoritas, celebra el viernes y disfruta de tragos especiales para ellas. ¡Noche de risas, voces y fiesta!</p>
+                        </div>
+                        <div id="week-saturday" class=" px-4 py-3 mb-2 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(6)">
+                            <span class="text-gray-800 font-bold text-xl">Sábado: Rodizio de Pizzas</span>
+                            <p class="text-gray-300 text-gray-900 text-left">Come todo lo que quieras: pizzas variadas servidas sin parar en una noche deliciosa y perfecta para compartir con nuevos amigos.</p>
+                        </div>
+                        <div id="week-sunday" class=" px-4 py-3 mb-2 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(7)">
+                            <span class="text-gray-800 font-bold text-xl">Domingo: Cine Latinoamericano y Boliviano</span>
+                            <p class="text-gray-300 text-gray-900 text-left">Cerramos la semana con cine y cultura. Relájate con buenas películas, palomitas y una mirada profunda a nuestra identidad.</p>
+                        </div>
+                    </div>
+                    <div id="image-week" class="flex flex-col items-center max-w-1/2 image-week" > 
+                        <img id="week-image-1" src="images/week/monday1.webp" alt="Aventura 1" class="rounded-xl shadow-lg w-3/5 mb-4 border-tertiary ml-40" data-aos="fade-left"/>
+                        <img id="week-image-2" src="images/week/monday2.webp" alt="Aventura 1" class="rounded-xl shadow-lg w-3/5 mb-4 border-secondary -mt-24" data-aos="fade-right"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white py-16 px-6">
+            <div class="max-w-7xl mx-auto text-center">
+                <span class="flex flex-col items-start border-bottom-color-primary border-b-6 mb-8" data-aos="fade-right">
+                    <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3"><span class="mr-2">🎉</span> Spanish School <span class="text-white ml-3"> Activities</span> </h2>
+                </span>
+                <p class="text-gray-700 text-lg text-left mb-16" data-aos="fade-down">At Bolivian Spanish School, learning doesn’t stop in the classroom. We offer fun and immersive cultural activities that help you connect with other students and locals:</p>
+
+
+                <div class="grid grid-cols-3 grid-rows-2 gap-4">
+                    <div class="col-span-2 relative rounded-xl overflow-hidden border-4 border-yellow-400 h-90"  data-aos="zoom-in">
+                        <img src="images/activity1.webp" alt="Volleyball" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-4">
+                            Volleyball matches every week with locals and students
+                        </div>
+                    </div>
+                    <div class="col-start-3 relative rounded-xl overflow-hidden border-4 border-yellow-400 h-90" data-aos="zoom-in">
+                        <img src="images/activity2.webp" alt="Cooking" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-4">
+                            Cooking classes: Learn how to prepare traditional Bolivian dishes
+                        </div>
+                    </div>
+                    <div class="row-start-2 relative rounded-xl overflow-hidden border-4 border-yellow-400 h-90" data-aos="zoom-out">
+                        <img src="images/activity3.webp" alt="Language Exchange" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-4">
+                            Language exchange nights (Parlanas)
+                        </div>
+                    </div>
+                    <div class="col-span-2 row-start-2 relative rounded-xl overflow-hidden border-4 border-yellow-400 h-90" data-aos="zoom-out">
+                        <img src="images/activity4.webp" alt="Museum" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-4">
+                            Cultural outings and museum visits
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        
+        <section class="legend bg-primary py-12 px-6 mt-24  bg-cover bg-center bg-fixed">
+            <div class="max-w-7xl mx-auto text-center">
+                <p class="text-black text-2xl text-center mb-4 italic">
+                    Más que un lugar para dormir, ofrecemos un espacio auténtico donde el descanso, la cultura y la aventura se encuentran en perfecta armonía.
+                </p>
+                
+                <button class="bg-black text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 mt-8">
+                    <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">Accommodation</a>
+                </button>
+                
+            </div>
+        </section>
+
+        <section class="bg-hostal py-32 px-6 mt-16 border-bottom-color-primary border-bottom-width-4 border-section bg-fixed">
+            <div class="max-w-7xl mx-auto text-center flex flex-col lg:flex-row items-center justify-between gap-10">
+                <div class="lg:w-1/2 flex flex-col items-start" data-aos="fade-right">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-end text-color-secondary gap-4">
+                        <span class="material-symbols-outlined icon-primary">apartment</span>
+                        Colors House Hostal</h2>
+                    <p class="text-white text-lg text-justify mb-4">
+                        Nuestro hostal es mucho más que un lugar donde dormir. Es un espacio pensado para viajeros de corazón, donde la comodidad se une con un ambiente cálido, colorido y lleno de vida. Aquí, personas de diferentes partes del mundo se encuentran, comparten historias y crean recuerdos inolvidables. Con habitaciones acogedoras, áreas comunes para relajarse o socializar, y una ubicación estratégica para explorar la ciudad, nuestro hostal te invita a vivir Bolivia desde una experiencia auténtica, cercana y humana. 
+
+                    </p>
+                    <p class="text-color-primary font-bold text-xl" >¡Te esperamos con los brazos abiertos!</p>
+                    
+                    <button class="bg-primary text-black px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 mt-8">
+                        <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">More Information</a>
+                    </button>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 grid-rows-2 gap-4 picture-service" data-aos="fade-left">
+                    <div class="relative overflow-hidden group  rounded-xl shadow-lg border-tertiary w-full h-64 bg-[url('images/hostal-one.webp')] bg-cover" data-aos="fade-up">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-full h-64 bg-[url('images/hostal-two.webp')] bg-cover" data-aos="fade-down">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-full col-span-2 h-64 bg-[url('images/hostal-three.webp')] bg-cover" data-aos="fade-up">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-coffe py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section bg-fixed">
+            <div class="max-w-7xl mx-auto text-center flex flex-row lg:flex-col items-center justify-between gap-10">
+                <div class="lg:w-full flex flex-col items-center">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-end text-color-black gap-4" data-aos="fade-down">
+                        <span class="material-symbols-outlined icon-black">local_cafe</span> Cafe Colors
+                    </h2>
+                    <p class="text-black text-lg text-justify mb-4 " data-aos="fade-up">
+                        Café Colors es el rincón perfecto para relajarte, conectar y disfrutar de los sabores locales. Ofrecemos café de origen boliviano, jugos naturales, snacks y opciones saludables en un ambiente lleno de color, arte y buena energía. Ya sea que vengas a leer, trabajar o simplemente compartir una charla, aquí siempre encontrarás una sonrisa y una taza lista para acompañarte.
+                    </p>
+                    <p class="text-color-black font-bold text-xl" data-aos="fade-down" >¡Café que une culturas, aromas que inspiran momentos!</p>
+                    
+                </div>
+                <div class="lg:w-full flex flex-row gap-4 picture-service">
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 col-span-2 h-64 bg-[url('images/hostal-three.webp')] bg-cover" data-aos="fade-up">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/2 h-64 bg-[url('images/hostal-two.webp')] bg-cover" data-aos="fade-down">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 h-64 bg-[url('images/hostal-one.webp')] bg-cover" data-aos="fade-up">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+
+                    <!-- <img src="images/hostal-one.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-1/4" data-aos="fade-down" />
+                    <img src="images/hostal-three.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-1/4" data-aos="fade-down" /> -->
+                    <!-- <img src="images/hostal-two.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-1/2" data-aos="fade-up" /> -->
+                </div>
+                
+                <button class="bg-primary text-black px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 mt-8" data-aos="fade-down">
+                    <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">More Information</a>
+                </button>
+            </div>
+        </section>
+
+        <section class="bg-hostal py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
+            <div class="max-w-7xl mx-auto text-center flex flex-col lg:flex-row items-center justify-between gap-10">
+                <div class="lg:w-1/2 flex flex-col items-start" data-aos="fade-right">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-end text-color-secondary gap-4">
+                        <span class="material-symbols-outlined icon-primary">hiking</span>
+                        Agencia de viajes</h2>
+                    <p class="text-white text-lg text-justify mb-4">
+                        Nuestra agencia de viajes nace con el deseo de mostrarte lo mejor de Bolivia de forma auténtica y cercana. Ofrecemos tours culturales, naturales y de aventura, pensados para todo tipo de viajero. Desde caminatas por paisajes increíbles hasta experiencias locales únicas, cada recorrido está diseñado con amor, seguridad y respeto por las culturas que nos rodean. Te ayudamos a descubrir el país más allá de los mapas, con ojos curiosos y espíritu libre.
+                    </p>
+                    <p class="text-color-primary font-bold text-xl" >¡Explora Bolivia con alma viajera!</p>
+                    
+                    <button class="bg-primary text-black px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 mt-8">
+                        <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">More Information</a>
+                    </button>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 grid-rows-2 gap-4">
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-full h-128 bg-[url('images/hostal-one.webp')] bg-cover row-span-2" data-aos="fade-down">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-full h-full bg-[url('images/hostal-two.webp')] bg-cover" data-aos="fade-right">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-full h-full bg-[url('images/hostal-three.webp')] bg-cover col-start-2 " data-aos="fade-up">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-coffe py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
+            <div class="max-w-7xl mx-auto text-center flex flex-row lg:flex-col items-center justify-between gap-10">
+                <div class="lg:w-full flex flex-col items-center">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-end text-color-black gap-4" data-aos="fade-down">
+                        <span class="material-symbols-outlined icon-black">school</span>
+                         Spanish School</h2>
+                    <p class="text-gray-900 text-lg text-justify mb-4" data-aos="fade-up">
+                        Nuestra escuela de español es un espacio para aprender el idioma de manera práctica, divertida y culturalmente inmersiva. Ofrecemos clases personalizadas para todos los niveles, con profesores apasionados que combinan gramática, conversación y actividades reales fuera del aula. Aquí no solo aprendes a hablar español, también vives el idioma en cada experiencia, compartiendo con locales y otros viajeros en un entorno amigable y motivador.
+                    </p>
+                    <p class="text-color-black font-bold text-xl" data-aos="fade-down">"Aprende español, vive la cultura."</p>
+                    
+                </div>
+                <div class="lg:w-full flex flex-row gap-4 picture-service">
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 col-span-2 h-64 bg-[url('images/hostal-three.webp')] bg-cover" data-aos="fade-up">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/2 h-64 bg-[url('images/hostal-two.webp')] bg-cover" data-aos="fade-down">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 h-64 bg-[url('images/hostal-one.webp')] bg-cover" data-aos="fade-up">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">
+                    <button
+                        class="bg-primary text-black px-6 py-2 rounded-full hover:text-white hover:bg-black transition-colors duration-300 ease-in-out mt-8"
+                        data-aos="fade-down"
+                    >
+                        More Information.
+                    </button>
+                </a>
+            </div>
+        </section>
+
+        <section class="stadistics bg-primary py-12 px-6 mt-24 ">
+            <div class="max-w-4xl mx-auto text-center text-white flex flex-col lg:flex-row items-center justify-between gap-10">
+                <span class="flex flex-col items-center">
+                    <p class="counter border-b-4 border-white pb-1 text-6xl font-bold" data-target="1200">0</p>
+                    <p class="text-color-primary w-2/3">Estudiantes contentos</p>
+                </span>
+                <span class="flex flex-col items-center">
+                    <p class="counter border-b-4 border-white pb-1 text-6xl font-bold" data-target="10">0</p>
+                    <p class="text-color-primary w-2/3">Años de experiencia</p>
+                </span>
+                <span class="flex flex-col items-center">
+                    <p class="counter border-b-4 border-white pb-1 text-6xl font-bold" data-target="90">0</p>
+                    <p class="text-color-primary w-2/3">Estudiantes mejoran con nosotros</p>
+                </span>
+            </div>
+        </section>
+
+
+
+        <section class="bg-white py-16 px-6 mt-24">
+            <div class="relative max-w-7xl mx-auto overflow-hidden" data-aos="fade-right">
+                <span class="flex flex-col items-start border-bottom-color-primary border-b-6 mb-8">
+                    <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3 "><span class="mr-2">👍</span> Opiniones <span class="text-white ml-3"> Reales</span> </h2>
+                </span>
+                <p class="text-gray-700 text-lg text-left mb-16 ">
+                    Descubre lo que otros viajeros piensan de su experiencia con nosotros. Sus comentarios reflejan la calidez, el ambiente y las memorias que creamos juntos. ¡Tu voz también será bienvenida!
+                </p>
+            </div>
+            <div class="relative max-w-7xl mx-auto overflow-hidden no-scrollbar" data-aos="zoom-in">
+                <!-- Botón Izquierdo -->
+                <button onclick="scrollRight2()" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-full shadow hidden md:block">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+
+                <!-- CARRUSEL -->
+                <div id="scrollContainer" class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
+                <!-- TARJETA 1 -->
+                <div class="min-w-[80%] md:min-w-[45%] snap-start bg-yellow-100 rounded-xl p-6 shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                    <img src="https://i.pravatar.cc/60?img=1" class="w-14 h-14 rounded-full" />
+                    <div>
+                        <h3 class="text-xl font-bold">Luca R.</h3>
+                        <p class="text-sm font-semibold bg-white px-4 rounded-full"> Australia</p>
+                        <p class="text-sm text-gray-500">25-04-2024</p>
+                    </div>
+                    </div>
+                    <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500" style="font-size: 52px;">format_quote</span>
+                    <p class="italic text-gray-800">"Tomé clases durante una semana mientras me hospedaba en la hostal, ¡y ahora puedo pedir comida y hablar con locales sin problema! El ambiente fue relajado y súper amigable."</p>
+                </div>
+
+                <!-- TARJETA 2 -->
+                <div class="min-w-[80%] md:min-w-[45%] snap-start bg-rose-100 rounded-xl p-6 shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                    <img src="https://i.pravatar.cc/60?img=2" class="w-14 h-14 rounded-full" />
+                    <div>
+                        <h3 class="text-xl font-bold">Jonas H.</h3>
+                        <p class="text-sm font-semibold bg-white px-4 rounded-full"> Australia</p>
+                        <p class="text-sm text-gray-500">27-04-2024</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500" style="font-size: 52px;">format_quote</span>
+                <p class="italic text-gray-800">"Los profesores son pacientes y saben exactamente qué necesita un viajero. Las clases fueron útiles desde el primer día. Además, conocí a otros estudiantes con los que seguí viajando."</p>
+                </div>
+
+                <!-- TARJETA 3 -->
+                <div class="min-w-[80%] md:min-w-[45%] snap-start bg-teal-100 rounded-xl p-6 shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                    <img src="https://i.pravatar.cc/60?img=3" class="w-14 h-14 rounded-full" />
+                    <div>
+                        <h3 class="text-xl font-bold">Sheila M.</h3>
+                        <p class="text-sm font-semibold bg-white px-4 rounded-full"> USA</p>
+                        <p class="text-sm text-gray-500">27-04-2024</p>
+                    </div>
+                    </div>
+                    <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500" style="font-size: 52px;">format_quote</span>
+                    <p class="italic text-gray-800">"Perfecto para mochileros. Aprendí lo esencial para moverme por Sudamérica y practicar en mercados, buses y hostales. ¡Mucho mejor que apps!"</p>
+                </div>
+
+                <!-- TARJETA 4 -->
+                <div class="min-w-[80%] md:min-w-[45%] snap-start bg-indigo-100 rounded-xl p-6 shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                    <img src="https://i.pravatar.cc/60?img=4" class="w-14 h-14 rounded-full" />
+                    <div>
+                        <h3 class="text-xl font-bold">Alex P.</h3>
+                        <p class="text-sm font-semibold bg-white px-4 rounded-full"> UK</p>
+                        <p class="text-sm text-gray-500">28-04-2024</p>
+                    </div>
+                    </div>
+                    <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500" style="font-size: 52px;">format_quote</span>
+                    <p class="italic text-gray-800">"Tomé clases durante una semana mientras me hospedaba en la hostal, ¡y ahora puedo pedir comida y hablar con locales sin problema! El ambiente fue relajado y súper amigable."</p>
+                </div>
+                </div>
+
+                <!-- Botón Derecho -->
+                <button onclick="scrollRight()" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-full shadow hidden md:block">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="bg-gallery py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
+            <div class="max-w-7xl mx-auto text-center grid grid-cols-4 grid-rows-2 gap-4">
+                <img src="images/gallery-one.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-down" />
+                <img src="images/gallery-two.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-up" />
+                <img src="images/gallery-three.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-span-2 col-start-1 row-start-2" data-aos="fade-down" />
+                <img src="images/gallery-four.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover col-start-3 row-start-1" data-aos="fade-right" />
+                <img src="images/gallery-five.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover row-span-2 col-start-4 row-start-1" data-aos="fade-up" />
+                <img src="images/gallery-six.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover col-start-3" data-aos="fade-left" />
+            </div>
+        </section>
+
+        <section class="bg-white py-16 px-6 mt-24">
+            <div class="relative max-w-7xl mx-auto overflow-hidden">
+                <span class="flex flex-col items-start border-bottom-color-primary border-b-6 mb-8" data-aos="fade-right">
+                    <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3 "><span class="mr-2">🧭</span> ¿Dónde <span class="text-white ml-3"> estamos?</span> </h2>
+                </span>
+                <p class="text-gray-700 text-lg text-left mb-4" data-aos="fade-right">
+                    Estamos ubicados en una zona estratégica, cerca de los principales puntos turísticos, restaurantes, transporte y vida local. ¡Encuentra tu camino hasta nuestro hostal y empieza tu aventura con nosotros!
+                </p>
+                
+                <iframe class="w-0 h-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.318017349494!2d-65.26025760000002!3d-19.049750399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf364b2f753d%3A0xbbdc06f7e107cb7f!2sColors%20House%20Hostel!5e0!3m2!1ses-419!2sbo!4v1749512783051!5m2!1ses-419!2sbo" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>
+        </section>
+
+        <section class=" mb-24">
+            <div class="relative max-w-7xl mx-auto overflow-hidden flex flex-row bg-primary shadow-lg rounded-lg"  data-aos="zoom-out">
+                <iframe class="w-2/3 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.318017349494!2d-65.26025760000002!3d-19.049750399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf364b2f753d%3A0xbbdc06f7e107cb7f!2sColors%20House%20Hostel!5e0!3m2!1ses-419!2sbo!4v1749512783051!5m2!1ses-419!2sbo" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="bg-primary text-gray-900 text-left p-4 w-1/3 ">
+                    <p class="text-2xl font-bold">Colors House Hostal</p>
+                    <div class="flex flex-row justify-start items-center my-1"><span class="material-symbols-outlined mr-2">pin_drop</span><p class="text-md">Calle Dalence 109, Sucre, Bolivia</p></div>
+                    <div class="flex flex-row justify-start items-center my-1"><span class="material-symbols-outlined mr-2">phone_callback</span><p class="text-md">+591 75451699</p></div>
+                    <div class="flex flex-row justify-start items-center my-1"><span class="material-symbols-outlined mr-2">mail</span><a href="mailto:colors.hostal@gmail.com"> colors.hostal@gmail.com</a></div>	
+                    
+                    <div id="contactForm" class="flex flex-col items-start">
+                        <input type="text" placeholder="Name" class="w-full bg-white p-2 mt-4 border-bottom-color-black " />
+                        <select class="w-full p-2 mt-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="spanish">Hostal</option>
+                            <option value="english">Escuela</option>
+                            <option value="french">Cafe</option>
+                            <option value="french">Agencia</option>
+                        </select>
+                        <textarea class="w-full p-2 mt-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" placeholder="Leave a comment..."></textarea>
+                        <button class="bg-black text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition duration-300 mt-2 self-end flex flex-row">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z" clip-rule="evenodd"/>
+                                <path fill="currentColor" d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"/>
+                            </svg>
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+        <footer class="">
+            <div class="w-full bg-primary text-center p-8 flex justify-center items-center flex-row gap-4">
+                <div class="bg-white text-black px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/>
+                    </svg>
+                </div>
+
+                <div class="bg-white text-black px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <div class="bg-white text-black px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <div class="bg-white text-black px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    <svg width="24px" height="24px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Icon/Social/tiktok-black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path d="M38.0766847,15.8542954 C36.0693906,15.7935177 34.2504839,14.8341149 32.8791434,13.5466056 C32.1316475,12.8317108 31.540171,11.9694126 31.1415066,11.0151329 C30.7426093,10.0603874 30.5453728,9.03391952 30.5619062,8 L24.9731521,8 L24.9731521,28.8295196 C24.9731521,32.3434487 22.8773693,34.4182737 20.2765028,34.4182737 C19.6505623,34.4320127 19.0283477,34.3209362 18.4461858,34.0908659 C17.8640239,33.8612612 17.3337909,33.5175528 16.8862248,33.0797671 C16.4386588,32.6422142 16.0833071,32.1196657 15.8404292,31.5426268 C15.5977841,30.9658208 15.4727358,30.3459348 15.4727358,29.7202272 C15.4727358,29.0940539 15.5977841,28.4746337 15.8404292,27.8978277 C16.0833071,27.3207888 16.4386588,26.7980074 16.8862248,26.3604545 C17.3337909,25.9229017 17.8640239,25.5791933 18.4461858,25.3491229 C19.0283477,25.1192854 19.6505623,25.0084418 20.2765028,25.0219479 C20.7939283,25.0263724 21.3069293,25.1167239 21.794781,25.2902081 L21.794781,19.5985278 C21.2957518,19.4900128 20.7869423,19.436221 20.2765028,19.4380839 C18.2431278,19.4392483 16.2560928,20.0426009 14.5659604,21.1729264 C12.875828,22.303019 11.5587449,23.9090873 10.7814424,25.7878401 C10.003907,27.666593 9.80084889,29.7339663 10.1981162,31.7275214 C10.5953834,33.7217752 11.5748126,35.5530237 13.0129853,36.9904978 C14.4509252,38.4277391 16.2828722,39.4064696 18.277126,39.8028054 C20.2711469,40.1991413 22.3382874,39.9951517 24.2163416,39.2169177 C26.0948616,38.4384508 27.7002312,37.1209021 28.8296253,35.4300711 C29.9592522,33.7397058 30.5619062,31.7522051 30.5619062,29.7188301 L30.5619062,18.8324027 C32.7275484,20.3418321 35.3149087,21.0404263 38.0766847,21.0867664 L38.0766847,15.8542954 Z" id="Fill-1" fill="#000000"></path>
+                        </g>
+                    </svg>
+                </div>                
+            </div>
+            
+            <div class="bg-primary text-center pb-4 flex flex-wrap justify-center items-center gap-6 text-black">
+                <a href="" target="_blank" class="text-lg hover:underline">Inicio</a>
+                <a href="" target="_blank" class="text-lg hover:underline">Agencia </a>
+                <a href="" target="_blank" class="text-lg hover:underline">Hostal</a>
+                <a href="" target="_blank" class="text-lg hover:underline">Escuela</a>
+                <a href="" target="_blank" class="text-lg hover:underline">Cafe</a>
+                <a href="" target="_blank" class="text-lg hover:underline">Testimonio</a>
+            </div>
+            <div class="w-full bg-black text-center text-white py-2">
+                <p class="text-sm text-white"><p class="text-sm">© 2024 Colors House Hostal. Todos los derechos reservados.</p>Diseñado por <a href="" class="text-blue-400 hover:underline" target="_blank">Leonel Avendanio</a></p>
+            </div>
+        </footer>
+        
+        <script src="js/index.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script> 
+    </body>
+</html>
