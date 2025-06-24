@@ -10,6 +10,24 @@
     font-size: 3em;
     transition: all 0.3s ease-in-out;
 }
+
+.active-btn{
+    color: #1E1E1E;
+    background-color: #FEC303;
+}
+#menu {
+    overflow: hidden;
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+   transition: all 0.3s ease-in-out; 
+}
+#menu-toggle {
+    width: 64px;
+    height: 64px;
+    font-size: 3em;
+}
+
 .inactive{
     color: #D9D9D9;
     border-radius: 8px;
@@ -74,9 +92,7 @@
     background-color: #1e1e1e;
 }
 
-.picture-colors{
-   
-}
+
 .picture-colors img{
     border: 4px solid #FEC303;
     border-radius: 16px;
@@ -183,4 +199,335 @@ scrollbar-width: none;     /* Firefox */
 #contactForm textarea {
     background-color: #FFFFFF;
     border-bottom: 2px solid #1a1a1a;
+}
+
+/* media queries */
+/* Mobile */
+@media (max-width: 768px) {
+    .coffee{
+        flex-direction: column;
+    }
+
+    .coffee p {
+        text-align: center;
+
+        width: 100%;
+    }
+    .coffee .img1 {
+        width: 100%;
+        height: 200px;
+    }
+    .coffee .img2  {
+        width: 46%;
+        height: 200px;
+    }
+
+    .coffee .img3{
+        width: 46%;
+        height: 200px;
+    }
+    .coffee .picture-service {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .school {
+        flex-direction: column;
+    }
+    .contact{
+        flex-direction: column;
+        max-width: 80%;
+    }
+
+    .banner-iconos{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-banner{
+        flex-direction: column-reverse;
+    }
+    .school-banner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .school-banner .image-banner-1 {
+        width: 100%;
+        height: 180px;
+        margin: 0;
+    }
+    .school-banner .image-banner-2 {
+       width: 48%;
+        height: 160px;
+        margin: 0;
+    }
+    .school-banner .image-banner-3 {
+        width: 48%;
+        height: 160px;
+        margin: 0;
+    }
+    #banner {
+        text-align: center;
+    }
+    .services-colors{
+        margin-top: 24px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .picture-colors img{
+        width: 100%;
+        height: 200px;
+
+    }
+    .picture-colors{
+        width: 100%;
+        margin: 0;
+        padding: 0;   
+    }
+
+    h2{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.5em;
+    }
+    .week-items{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .week-items span{
+        font-size: 1em;
+    }
+
+    .week-items p{
+        font-size: .8em;
+    }
+
+    .week-items div{
+        text-align: center;
+        width: 100%;
+    }
+
+    #image-week{
+        width: 100%;
+        height: 200px;
+        margin: 0;
+        max-width: 100%;
+        
+    }
+
+    #image-week img{
+        margin: 0;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #week-image-2{
+        display: none;
+    }
+    .image-activities{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-activities > div{
+        height: 200px;
+    }
+    #hostal {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+    }
+
+    .hostal-service {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hostal-service > div {
+        
+        height: 200px;
+    }
+
+    .description-coffee h2 {
+        font-size: 1.5em;
+        text-align: start;
+    }
+
+    .description-coffee p {
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .hiking-service {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .hiking-service :nth-child(1){
+        width: 100%;
+        height: 200px;
+        margin: 0;
+    }
+    .hiking-service :nth-child(2){
+        width: 47%;
+        height: 200px;
+        margin: 0;
+    }
+    .hiking-service :nth-child(3){
+        width: 47%;
+        height: 200px;
+        margin: 0;
+    }
+
+    .hiking-service button,
+    .school-service button
+    {
+        max-width: 50%;
+        max-height: 36px;
+    }
+
+    .school-service {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .school-service :nth-child(1){
+        width: 100%;
+        height: 200px;
+        margin: 0;
+    }
+
+    .school-service :nth-child(2){
+        width: 47%;
+        height: 200px;
+        margin: 0;
+    }
+
+    .school-service :nth-child(3){
+        width: 47%;
+        height: 200px;
+        margin: 0;
+    }
+
+    .gallery-content {
+        max-width: 100vw;
+        overflow: hidden;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .gallery-content img{
+        height: 200px;
+        min-height: 200px;
+        
+    }
+    
+    .gallery-content :nth-child(1) {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .gallery-content :nth-child(2) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .gallery-content :nth-child(3) {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .gallery-content :nth-child(4) {
+        
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .gallery-content :nth-child(5){
+        grid-area: 4 / 1 / 5 / 2;
+    } 
+    .gallery-content :nth-child(6) {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .contact>div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menu {
+        display: none ;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+    #menu a {
+        font-size: 1.5em;
+        margin: 8px 0;
+    }
+    #week,
+    #banner-main
+    {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+    }
+    #description-school h2,
+    #description-hostal h2,
+    #description-coffee h2,
+    #description-agency h2
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    #banner-main h2{
+        text-align: center;
+    }
+    #description-text-school,
+    #school p,
+    li,
+    footer > div > a{
+        font-size: 1em;
+    }
+    
+    #new-program{
+        padding: 16px;
+    }
 }

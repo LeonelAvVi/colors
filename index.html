@@ -32,35 +32,59 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="./css/styles.css" />
-        <style type="text/tailwindcss">     
-            @theme {        --color-clifford: #da373d;      }    
-        </style>
+        <script>
+            tailwind.config = {
+                theme: {
+                extend: {
+                    screens: {
+                    xs: '480px',
+                    },
+                    colors: {
+                    clifford: '#da373d',
+                    },
+                },
+                },
+            }
+        </script>
+        
 
     </head>
     <body>
         <!-- NAVBAR -->
-        <header class="bg-black shadow fixed top-0 left-0 right-0 z-50">
+        <header class="bg-black shadow fixed top-0 left-0 right-0 z-1000">
             <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                <!-- Logo -->
                 <img src="images/logo.webp" alt="Logo" class="h-12 w-auto" />
-                <nav class="space-x-4 hidden md:flex">
-                <a href="#inicio" class="text-color-primary hover:text-blue-600">Inicio</a>
-                <a href="#info" class="text-white hover:text-blue-600">Agencia</a>
-                <a href="#hostal" class="text-white hover:text-blue-600">Hostal</a>
-                <a href="#coffe" class="text-white hover:text-blue-600">Café</a>
-                <a href="#school" class="text-white hover:text-blue-600">Escuela</a>
-                <a href="#activities" class="text-white hover:text-blue-600">Testimonio</a>
-                <a href="#contacto" class="text-black bg-primary py-1 px-4 rounded-full">Contacto/Reserva</a>
+
+                <!-- Botón hamburguesa (visible solo en móviles) -->
+                <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <!-- Ícono -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                </button>
+
+                <!-- Menú navegación -->
+                <nav id="menu" class="flex-col space-y-4 md:space-y-0 md:space-x- top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-center md:text-left px-4 py-4 md:py-0">
+                    <a href="#inicio" class="text-color-primary hover:text-blue-600">Inicio</a>
+                    <a href="#info" class="text-white hover:text-blue-600">Agencia</a>
+                    <a href="#hostal" class="text-white hover:text-blue-600">Hostal</a>
+                    <a href="#coffe" class="text-white hover:text-blue-600">Café</a>
+                    <a href="school.html" class="text-white hover:text-blue-600">Escuela</a>
+                    <a href="#activities" class="text-white hover:text-blue-600">Testimonio</a>
+                    <a href="#contacto" class="text-black bg-primary py-1 px-4 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">Contacto/Reserva</a>
                 </nav>
             </div>
         </header>
         <section id="banner-main" class="relative bg-gray-900 text-white py-16 px-6 flex flex-col items-center justify-center min-h-screen lg:px-20 banner-main "
         style="background-image: url('images/bg-banner-school.webp'); background-size: cover;  border-bottom-color: #FEC303; border-bottom-width: 8px;"
         >
-            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center h-full gap-10 ">
+            <div class="content-banner max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center h-full gap-10 lg:max-w-7xl md:max-w-full">
                 <!-- Texto e íconos -->
                 <div class="lg:w-1/2 banner-text" id="banner">
                 <!-- Iconos -->
-                    <div class="flex space-x-2 mb-4 flex justify-start items-center z-1000">
+                    <div  class="banner-iconos flex space-x-2 mb-4 flex justify-start items-center z-1000 md:justify-center lg:justify-start">
                         <span id="icon-button-school" class="material-symbols-outlined active" onclick="changeService(0)"> school </span>
                         <span id="icon-button-hostal" class="material-symbols-outlined inactive" onclick="changeService(1)">apartment</span>
                         <span id="icon-button-agency" class="material-symbols-outlined inactive" onclick="changeService(2)">hiking</span>
@@ -87,9 +111,9 @@
                 </div>
 
                 <div class="lg:w-1/2 flex flex-col z-10 school-banner">
-                    <img src="images/banner-school.webp" alt="Clase" class="rounded-xl shadow-lg w-2/5 ml-40 -mb-20 border-tertiary" data-aos="fade-right" />
-                    <img src="images/banner-school2.webp" alt="Estudiante" class="rounded-xl shadow-lg w-2/5 z-10 border-secondary" data-aos="fade-up"  />
-                    <img src="images/banner-school3.webp" alt="Grupo" class="rounded-xl shadow-lg w-2/5 ml-32 -mt-16 border-tertiary" data-aos="fade-left" />
+                    <img src="images/banner-school.webp" alt="Clase" class=" image-banner-1 rounded-xl shadow-lg w-2/5 ml-40 -mb-20 border-tertiary" data-aos="fade-right" />
+                    <img src="images/banner-school2.webp" alt="Estudiante" class="image-banner-2 rounded-xl shadow-lg w-2/5 z-10 border-secondary" data-aos="fade-up"  />
+                    <img src="images/banner-school3.webp" alt="Grupo" class="image-banner-3 rounded-xl shadow-lg w-2/5 ml-32 -mt-16 border-tertiary" data-aos="fade-left" />
                 
                 </div>
             </div>
@@ -97,7 +121,7 @@
         <section class="bg-white py-16 px-6">
             <div class="max-w-7xl mx-auto text-center flex flex-col items-center">
                 <p class="text-gray-700 text-lg text-left mb-4 ">Nuestro equipo está compuesto por personas apasionadas por la hospitalidad, los viajes y la cultura. Con calidez, profesionalismo y una sonrisa siempre lista, trabajamos juntos para que cada huésped se sienta bienvenido, acompañado y parte de esta experiencia inolvidable..</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 px-32">
+                <div class="services-colors grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 px-32 ">
                     <div class="picture-colors mt-24" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                         <img src="images/colors1.webp" alt="Equipo de Clases" class="rounded-xl min-w-full hover:scale-110 transition-transform duration-300 shadow-lg" />
                         <h3 class="text-xl font-semibold mb-2">Hostel Colors</h3>
@@ -119,9 +143,9 @@
             </div>
         </section>
         <section id="week" class="week-section bg-gray-100 py-32 px-6 bg-fixed">
-            <div class="max-w-7xl mx-auto text-center">
+            <div class="max-w-7xl mx-auto text-center md:w-m-full lg:w-full">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center text-color-secondary" data-aos="fade-right"><span class="mr-2">🗓️</span><span class="mr-2 text-color-primary">Cada día, una</span>  aventura diferente</h2>
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-10 mt-8">
+                <div class="week-items flex flex-col lg:flex-row items-center justify-between gap-10 mt-8">
                     <div class="w-1/2 flex flex-col items-start" data-aos="fade-up">
                         <div id="week-monday" class=" px-4 py-3 mb-2 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-active" onclick="changeWeek(1)">
                             <span class="text-gray-800 font-bold text-2xl">Lunes: Noche Italiana</span>
@@ -167,7 +191,7 @@
                 <p class="text-gray-700 text-lg text-left mb-16" data-aos="fade-down">At Bolivian Spanish School, learning doesn’t stop in the classroom. We offer fun and immersive cultural activities that help you connect with other students and locals:</p>
 
 
-                <div class="grid grid-cols-3 grid-rows-2 gap-4">
+                <div class="image-activities grid grid-cols-3 grid-rows-2 gap-4">
                     <div class="col-span-2 relative rounded-xl overflow-hidden border-4 border-yellow-400 h-90"  data-aos="zoom-in">
                         <img src="images/activity1.webp" alt="Volleyball" class="w-full h-full object-cover" />
                         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-4">
@@ -209,7 +233,7 @@
             </div>
         </section>
 
-        <section class="bg-hostal py-32 px-6 mt-16 border-bottom-color-primary border-bottom-width-4 border-section bg-fixed">
+        <section id="hostal" class="bg-hostal py-32 px-6 mt-16 border-bottom-color-primary border-bottom-width-4 border-section bg-fixed">
             <div class="max-w-7xl mx-auto text-center flex flex-col lg:flex-row items-center justify-between gap-10">
                 <div class="lg:w-1/2 flex flex-col items-start" data-aos="fade-right">
                     <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-end text-color-secondary gap-4">
@@ -225,7 +249,7 @@
                         <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">More Information</a>
                     </button>
                 </div>
-                <div class="lg:w-1/2 grid grid-cols-2 grid-rows-2 gap-4 picture-service" data-aos="fade-left">
+                <div class="lg:w-1/2 grid grid-cols-2 grid-rows-2 gap-4 picture-service hostal-service" data-aos="fade-left">
                     <div class="relative overflow-hidden group  rounded-xl shadow-lg border-tertiary w-full h-64 bg-[url('images/hostal-one.webp')] bg-cover" data-aos="fade-up">
                         <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
@@ -249,9 +273,9 @@
         </section>
 
         <section class="bg-coffe py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section bg-fixed">
-            <div class="max-w-7xl mx-auto text-center flex flex-row lg:flex-col items-center justify-between gap-10">
-                <div class="lg:w-full flex flex-col items-center">
-                    <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-end text-color-black gap-4" data-aos="fade-down">
+            <div class=" coffee max-w-7xl mx-auto text-center flex flex-row lg:flex-col items-center justify-between gap-10 ">
+                <div class="lg:w-full flex flex-col items-center description-coffee">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center text-color-black gap-4" data-aos="fade-down">
                         <span class="material-symbols-outlined icon-black">local_cafe</span> Cafe Colors
                     </h2>
                     <p class="text-black text-lg text-justify mb-4 " data-aos="fade-up">
@@ -261,27 +285,23 @@
                     
                 </div>
                 <div class="lg:w-full flex flex-row gap-4 picture-service">
-                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 col-span-2 h-64 bg-[url('images/hostal-three.webp')] bg-cover" data-aos="fade-up">
+                    <div class="img1 relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 col-span-2 h-64 bg-[url('images/hostal-three.webp')] bg-cover" data-aos="fade-up">
                         <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
 
-                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/2 h-64 bg-[url('images/hostal-two.webp')] bg-cover" data-aos="fade-down">
+                    <div class=" img2 relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/2 h-64 bg-[url('images/hostal-two.webp')] bg-cover" data-aos="fade-down">
                         <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
 
-                    <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 h-64 bg-[url('images/hostal-one.webp')] bg-cover" data-aos="fade-up">
+                    <div class="img3 relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 h-64 bg-[url('images/hostal-one.webp')] bg-cover" data-aos="fade-up">
                         <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
-
-                    <!-- <img src="images/hostal-one.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-1/4" data-aos="fade-down" />
-                    <img src="images/hostal-three.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-1/4" data-aos="fade-down" /> -->
-                    <!-- <img src="images/hostal-two.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-1/2" data-aos="fade-up" /> -->
                 </div>
                 
                 <button class="bg-primary text-black px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 mt-8" data-aos="fade-down">
@@ -305,21 +325,21 @@
                         <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">More Information</a>
                     </button>
                 </div>
-                <div class="lg:w-1/2 grid grid-cols-2 grid-rows-2 gap-4">
+                <div class="lg:w-1/2 grid grid-cols-2 grid-rows-2 gap-4 hiking-service">
                     <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-full h-128 bg-[url('images/hostal-one.webp')] bg-cover row-span-2" data-aos="fade-down">
-                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
 
                     <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-full h-full bg-[url('images/hostal-two.webp')] bg-cover" data-aos="fade-right">
-                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
 
                     <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-full h-full bg-[url('images/hostal-three.webp')] bg-cover col-start-2 " data-aos="fade-up">
-                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
@@ -328,9 +348,9 @@
         </section>
 
         <section class="bg-coffe py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
-            <div class="max-w-7xl mx-auto text-center flex flex-row lg:flex-col items-center justify-between gap-10">
-                <div class="lg:w-full flex flex-col items-center">
-                    <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-end text-color-black gap-4" data-aos="fade-down">
+            <div class="school lg:max-w-7xl md:max-w-7xl sm:max-w-full w-full lg:w-7xl md:w-7xl sm:w-7xl mx-auto text-center flex flex-col items-center justify-center gap-10">
+                <div class="lg:w-full flex flex-col items-center sm:w-full md:w-full bg-">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center text-color-black gap-4" data-aos="fade-down">
                         <span class="material-symbols-outlined icon-black">school</span>
                          Spanish School</h2>
                     <p class="text-gray-900 text-lg text-justify mb-4" data-aos="fade-up">
@@ -339,25 +359,31 @@
                     <p class="text-color-black font-bold text-xl" data-aos="fade-down">"Aprende español, vive la cultura."</p>
                     
                 </div>
-                <div class="lg:w-full flex flex-row gap-4 picture-service">
+                <div class="lg:w-full flex flex-row gap-4 picture-service school-service">
                     <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 col-span-2 h-64 bg-[url('images/hostal-three.webp')] bg-cover" data-aos="fade-up">
-                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button 
+                                onclick="window.location.href='school.html#gallery-hostal';"
+                                class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
                     <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/2 h-64 bg-[url('images/hostal-two.webp')] bg-cover" data-aos="fade-down">
-                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button 
+                                onclick="window.location.href='school.html#gallery-hostal';"
+                                class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
                     <div class="relative overflow-hidden group rounded-xl shadow-lg border-tertiary w-1/4 h-64 bg-[url('images/hostal-one.webp')] bg-cover" data-aos="fade-up">
-                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-end justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <button class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-300/70 flex items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <button 
+                                onclick="window.location.href='school.html#gallery-hostal';"
+                                class="mb-4 px-4 py-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition">Ver más</button>
                         </div>
                     </div>
                 </div>
                 
-                <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">
+                <a href="school.html" target="_blank">
                     <button
                         class="bg-primary text-black px-6 py-2 rounded-full hover:text-white hover:bg-black transition-colors duration-300 ease-in-out mt-8"
                         data-aos="fade-down"
@@ -469,7 +495,7 @@
         </section>
 
         <section class="bg-gallery py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
-            <div class="max-w-7xl mx-auto text-center grid grid-cols-4 grid-rows-2 gap-4">
+            <div class="gallery-content max-w-7xl mx-auto text-center grid grid-cols-4 grid-rows-2 gap-4">
                 <img src="images/gallery-one.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-down" />
                 <img src="images/gallery-two.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-up" />
                 <img src="images/gallery-three.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-span-2 col-start-1 row-start-2" data-aos="fade-down" />
@@ -494,7 +520,7 @@
         </section>
 
         <section class=" mb-24">
-            <div class="relative max-w-7xl mx-auto overflow-hidden flex flex-row bg-primary shadow-lg rounded-lg"  data-aos="zoom-out">
+            <div class=" contact relative max-w-7xl mx-auto overflow-hidden flex flex-row bg-primary shadow-lg rounded-lg"  data-aos="zoom-out">
                 <iframe class="w-2/3 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.318017349494!2d-65.26025760000002!3d-19.049750399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf364b2f753d%3A0xbbdc06f7e107cb7f!2sColors%20House%20Hostel!5e0!3m2!1ses-419!2sbo!4v1749512783051!5m2!1ses-419!2sbo" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <div class="bg-primary text-gray-900 text-left p-4 w-1/3 ">

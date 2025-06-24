@@ -5,6 +5,19 @@ let intervalId = null;
 let weekIndex = 0;
 let intervalIdWeek = null;
 
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    if (menuToggle.classList.contains("active")) {
+        menuToggle.classList.remove("active");
+        menu.style.display = "none";
+    } else {
+        menuToggle.classList.add("active");
+       menu.style.display = "flex";
+    }
+});
+
 function scrollLeft() {
     console.log("Scrolling left");
     

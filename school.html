@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Colors House Hostal</title>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+        <meta name="description" content="Más que un lugar para dormir. Colors House es un espacio auténtico donde el descanso, la cultura y la aventura se encuentran en armonía en el corazón de Sucre, Bolivia.">
+        <meta name="keywords" content="hostal, hospedaje, Sucre, Bolivia, alojamiento, travel, turismo, backpackers, aventura, descanso">
+        <meta name="author" content="Colors House Hostal" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#FEC303" />
+        <meta name="image" content="https://www.colorshouse.com/images/colors.jpg" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Open Graph (para Facebook y otras) -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.spanishlessonsbolivia.com/" />
+        <meta property="og:title" content="Colors House Hostal - Sucre, Bolivia" />
+        <meta property="og:description" content="Vive la experiencia de hospedarte en un lugar lleno de cultura, descanso y aventura. ¡Reserva ahora!" />
+        <meta property="og:image" content="https://www.colorshouse.com/images/og-image.jpg" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.spanishlessonsbolivia.com" />
+        <meta name="twitter:title" content="Colors House Hostal - Sucre, Bolivia" />
+        <meta name="twitter:description" content="Más que un lugar para dormir. Una experiencia única en el corazón de Sucre." />
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script>
+            tailwind.config = {
+                theme: {
+                extend: {
+                    screens: {
+                    xs: '480px',
+                    },
+                    colors: {
+                    clifford: '#da373d',
+                    },
+                },
+                },
+            }
+        </script>
+        
+
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <header class="bg-black shadow fixed top-0 left-0 right-0 z-1000">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                <!-- Logo -->
+                <img src="images/logo.webp" alt="Logo" class="h-12 w-auto" />
+
+                <!-- Botón hamburguesa (visible solo en móviles) -->
+                <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <!-- Ícono -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                </button>
+
+                <!-- Menú navegación -->
+                <nav id="menu" class="flex-col space-y-4 md:space-y-0 md:space-x- top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-center md:text-left px-4 py-4 md:py-0">
+                    <a href="index.html" class="text-color-primary hover:text-blue-600">Inicio</a>
+                    <a href="#info" class="text-white hover:text-blue-600">Agencia</a>
+                    <a href="#hostal" class="text-white hover:text-blue-600">Hostal</a>
+                    <a href="#coffe" class="text-white hover:text-blue-600">Café</a>
+                    <a href="#school" class="text-white hover:text-blue-600">Escuela</a>
+                    <a href="#activities" class="text-white hover:text-blue-600">Testimonio</a>
+                    <a href="#contacto" class="text-black bg-primary py-1 px-4 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">Contacto/Reserva</a>
+                </nav>
+            </div>
+        </header>
+        <section id="banner-main" class="relative bg-gray-900 text-white py-32 px-6 flex flex-col items-center justify-center lg:px-20 banner-main pt-40"
+        style="background-image: url('images/bg-banner-school.webp'); background-size: cover;  border-bottom-color: #FEC303; border-bottom-width: 8px;"
+        >
+            <div class="content-banner max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center  gap-10 lg:max-w-7xl md:max-w-full z-1000">
+                <!-- Texto e íconos -->
+                <p id="description-text-school" class="text-2xl lg:text-2xl md:text-4xl text-center mb-4 z-1000" data-aos="fade-up" data-aos-duration="1000">
+                    En nuestra Escuela de Español, ofrecemos una experiencia de aprendizaje única, centrada en la inmersión cultural y lingüística. Nuestros cursos están diseñados para adaptarse a todos los niveles, desde principiantes hasta avanzados, con profesores altamente capacitados y grupos reducidos que garantizan atención personalizada. Aprende el idioma mientras exploras la cultura boliviana, participas en actividades locales y te conectas con estudiantes de todo el mundo.
+                </p>
+
+                
+            </div>
+        </section>
+        <section id="school" class="bg-white py-16 px-6 mt-24">
+            <div class="relative max-w-7xl mx-auto overflow-hidden" data-aos="fade-right">
+                <span class="flex flex-col items-start border-bottom-color-primary border-b-6 mb-8">
+                    <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3 "><span class="mr-2">🎓</span> Plans & <span class="text-white ml-3"> Programs</span> </h2>
+                </span>
+                <p class="text-gray-700 text-lg text-left mb-16 ">
+                    Descubre nuestros programas de español diseñados para adaptarse a tus horarios, nivel y objetivos. Desde cursos intensivos hasta clases online o para niños, ofrecemos opciones flexibles que combinan práctica real, materiales incluidos y un ambiente divertido de aprendizaje.
+                </p>
+            </div>
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Regular Program -->
+                    <div class="bg-white border-secondary rounded-xl shadow mt-16" data-aos="fade-up">
+                        <h3 class="text-xl font-semibold mb-2 text-black bg-primary px-3 py-2">Regular Program</h3>
+                        <ul class="text-gray-700 list-disc list-inside px-6 py-2">
+                        <li>Flexible: 1-3 lessons/day</li>
+                        <li>20 hours / 5 days</li>
+                        <li>Grammar & Practice</li>
+                        <li>Flexible schedule</li>
+                        <li>Material included</li>
+                        <li>WiFi and breaks</li>
+                        </ul>
+                    </div>
+
+                    <!-- Intensive Program -->
+                    <div class="bg-white border-secondary rounded-xl shadow my-8" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-semibold mb-2 text-black bg-primary px-3 py-2">Intensive Program</h3>
+                        <ul class="text-gray-700 list-disc list-inside px-6 py-2">
+                        <li>Twice per day / 4 hours</li>
+                        <li>20 hours / 5 days</li>
+                        <li>Grammar & Practice</li>
+                        <li>Flexible schedule</li>
+                        <li>Material included</li>
+                        <li>WiFi and breaks</li>
+                        </ul>
+                    </div>
+
+                    <!-- Open Program -->
+                    <div class="bg-white border-secondary rounded-xl shadow mt-16" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl font-semibold mb-2 text-black bg-primary px-3 py-2">Open Program</h3>
+                        <ul class="text-gray-700 list-disc list-inside px-6 py-2">
+                        <li>Shared (group)</li>
+                        <li>2 hours/day</li>
+                        <li>Grammar & Practice</li>
+                        <li>Flexible schedule</li>
+                        <li>WiFi and breaks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="" class="week-section  w-full py-16">
+            <div class="relative max-w-7xl mx-auto overflow-hidden" data-aos="zoom-in">
+                <span class="justify-center flex text-2xl text-color-primary  lg:text-4xl font-bold mb-16">
+                    New Programs
+                </span>
+                <div id="new-program" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-white rounded-xl shadow border border-secondary flex justify-start flex-col" data-aos="fade-right">
+                        <h4 class=" px-6 font-bold text-black mb-2 bg-primary py-3">SmartKids Club</h4>
+                        <ul class="px-6 mb-6 text-gray-700 list-disc list-inside">
+                        <li>Homework support & reinforcement</li>
+                        <li>Grammar / Reading / Writing</li>
+                        <li>Fun learning activities</li>
+                        <li>Material included</li>
+                        <li>Flexible scheduling</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow border border-secondary flex justify-start flex-col" data-aos="fade-left">
+                        <h4 class=" px-6 font-bold text-black mb-2 bg-primary py-3">Click Spanish (Online)</h4>
+                        <ul class="px-6 mb-6 text-gray-700 list-disc list-inside">
+                        <li>Live group & 1-on-1 lessons</li>
+                        <li>Grammar & practice</li>
+                        <li>Recorded classes</li>
+                        <li>Flexible scheduling</li>
+                        <li>Material included</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="school" class="bg-white py-16 px-6 mt-24">
+            <div class="relative max-w-7xl mx-auto overflow-hidden" data-aos="fade-right">
+                <span class="flex flex-col items-start border-bottom-color-primary border-b-6 mb-8">
+                    <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3 "><span class="mr-2">📚</span>Actividades <span class="text-white ml-3"> de la escuela</span> </h2>
+                </span>
+                <p class="text-gray-700 text-lg text-left mb-16 ">
+                    En nuestra escuela, el aprendizaje va más allá del aula. Disfruta de actividades como vóley con locales, cocina tradicional, lectura divertida y encuentros bilingües para practicar en un ambiente relajado y multicultural.
+                </p>
+            </div>
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+                    <!-- Regular Program -->
+                    <div class="bg-white border-secondary rounded-xl shadow" data-aos="fade-up">
+                        <img src="images/activity1.webp" alt="Voleibol" class="w-full h-48 object-cover rounded-t-xl">
+                        <h3 class="text-xl font-semibold mb-2 text-black bg-primary px-3 py-2 text-center">Volley Fun</h3>
+                        <ul class="text-gray-700 list-disc list-inside px-6 py-2">
+                            <li>Monthy friendly watches.</li>
+                            <li>Player of the week.</li>
+                            <li>Bilinguel coocking tips.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Intensive Program -->
+                    <div class="bg-white border-secondary rounded-xl shadow" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/activity2.webp" alt="Cocina Club" class="w-full h-48 object-cover rounded-t-xl">
+                        <h3 class="text-xl font-semibold mb-2 text-black bg-primary px-3 py-2 text-center">La cocina club</h3>
+                        <ul class="text-gray-700 list-disc list-inside px-6 py-2">
+                        <li>New Recipes each week.</li>
+                        <li>End of session recipe printd.</li>
+                        <li>Biligud cooking vocabulary sheets.</li>
+                        <li>Chef of the week.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Open Program -->
+                    <div class="bg-white border-secondary rounded-xl shadow" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/activity3.webp" alt="Lectura Lounge" class="w-full h-48 object-cover rounded-t-xl">
+                        <h3 class="text-xl font-semibold mb-2 text-black bg-primary px-3 py-2 text-center">Club de lectura</h3>
+                        <ul class="text-gray-700 list-disc list-inside px-6 py-2">
+                        <li>Weekly storytime sessions.</li>
+                        <li>Books watched to reading levels.</li>
+                        <li>Read- alud time, boost your confidence!.</li>
+                        <li>All ages./ Mixed groups.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white border-secondary rounded-xl shadow" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/activity4.webp" alt="Lectura Lounge" class="w-full h-48 object-cover rounded-t-xl">
+                        <h3 class="text-xl font-semibold mb-2 text-black bg-primary px-3 py-2 text-center">Parlana Night</h3>
+                        <ul class="text-gray-700 list-disc list-inside px-6 py-2">
+                        <li>Language exchange.</li>
+                        <li>All ages.</li>
+                        <li>Open to public.</li>
+                        <li>Food and drinks available.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="school" class="bg-white px-6 mt-8 w-full pb-8">
+            <h2 class="text-3xl lg:text-4xl font-bold flex items-center justify-center w-full text-center py-1 px-3"><span class="mr-2">📚</span>Combine Classes<span class="text-color-primary ml-3">with Accommodation</span> </h2>
+            
+            <div class="relative max-w-7xl mx-auto overflow-hidden my-8" data-aos="fade-right">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
+                <div class="bg-yellow-200 p-6 rounded-xl shadow">
+                    <h4 class="text-lg font-bold text-black mb-2">Clases + Hotel</h4>
+                    <ul class="text-gray-700 list-disc list-inside">
+                    <li>5 days + 7 nights in hostel</li>
+                    <li>Desayuno incluido</li>
+                    <li>Habitación privada o compartida</li>
+                    <li>WiFi y material incluidos</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-200 p-6 rounded-xl shadow">
+                    <h4 class="text-lg font-bold text-black mb-2">Clases + Homestay</h4>
+                    <ul class="text-gray-700 list-disc list-inside">
+                    <li>5 días de clase + 7 noches con familia local</li>
+                    <li>Desayuno y almuerzo incluidos</li>
+                    <li>Habitación privada</li>
+                    <li>WiFi y material incluidos</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="gallery-hostal" class="bg-gallery py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
+            <div class="gallery-content max-w-7xl mx-auto text-center grid grid-cols-4 grid-rows-2 gap-4">
+                <img src="images/gallery-one.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-down" />
+                <img src="images/gallery-two.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-up" />
+                <img src="images/gallery-three.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-span-2 col-start-1 row-start-2" data-aos="fade-down" />
+                <img src="images/gallery-four.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover col-start-3 row-start-1" data-aos="fade-right" />
+                <img src="images/gallery-five.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover row-span-2 col-start-4 row-start-1" data-aos="fade-up" />
+                <img src="images/gallery-six.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover col-start-3" data-aos="fade-left" />
+            </div>
+        </section>
+        
+
+        <footer class="">
+            <div class="w-full bg-primary text-center p-8 flex justify-center items-center flex-row gap-4">
+                <div class="bg-white text-black px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/>
+                    </svg>
+                </div>
+
+                <div class="bg-white text-black px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <div class="bg-white text-black px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <div class="bg-white text-black px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    <svg width="24px" height="24px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Icon/Social/tiktok-black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path d="M38.0766847,15.8542954 C36.0693906,15.7935177 34.2504839,14.8341149 32.8791434,13.5466056 C32.1316475,12.8317108 31.540171,11.9694126 31.1415066,11.0151329 C30.7426093,10.0603874 30.5453728,9.03391952 30.5619062,8 L24.9731521,8 L24.9731521,28.8295196 C24.9731521,32.3434487 22.8773693,34.4182737 20.2765028,34.4182737 C19.6505623,34.4320127 19.0283477,34.3209362 18.4461858,34.0908659 C17.8640239,33.8612612 17.3337909,33.5175528 16.8862248,33.0797671 C16.4386588,32.6422142 16.0833071,32.1196657 15.8404292,31.5426268 C15.5977841,30.9658208 15.4727358,30.3459348 15.4727358,29.7202272 C15.4727358,29.0940539 15.5977841,28.4746337 15.8404292,27.8978277 C16.0833071,27.3207888 16.4386588,26.7980074 16.8862248,26.3604545 C17.3337909,25.9229017 17.8640239,25.5791933 18.4461858,25.3491229 C19.0283477,25.1192854 19.6505623,25.0084418 20.2765028,25.0219479 C20.7939283,25.0263724 21.3069293,25.1167239 21.794781,25.2902081 L21.794781,19.5985278 C21.2957518,19.4900128 20.7869423,19.436221 20.2765028,19.4380839 C18.2431278,19.4392483 16.2560928,20.0426009 14.5659604,21.1729264 C12.875828,22.303019 11.5587449,23.9090873 10.7814424,25.7878401 C10.003907,27.666593 9.80084889,29.7339663 10.1981162,31.7275214 C10.5953834,33.7217752 11.5748126,35.5530237 13.0129853,36.9904978 C14.4509252,38.4277391 16.2828722,39.4064696 18.277126,39.8028054 C20.2711469,40.1991413 22.3382874,39.9951517 24.2163416,39.2169177 C26.0948616,38.4384508 27.7002312,37.1209021 28.8296253,35.4300711 C29.9592522,33.7397058 30.5619062,31.7522051 30.5619062,29.7188301 L30.5619062,18.8324027 C32.7275484,20.3418321 35.3149087,21.0404263 38.0766847,21.0867664 L38.0766847,15.8542954 Z" id="Fill-1" fill="#000000"></path>
+                        </g>
+                    </svg>
+                </div>                
+            </div>
+            
+            <div class="bg-primary text-center pb-4 flex flex-wrap justify-center items-center gap-6 text-black">
+                <a href="index.html" target="_blank" class="text-lg hover:underline">Inicio</a>
+                <a href="" target="_blank" class="text-lg hover:underline">Agencia </a>
+                <a href="" target="_blank" class="text-lg hover:underline">Hostal</a>
+                <a href="" target="_blank" class="text-lg hover:underline">Escuela</a>
+                <a href="" target="_blank" class="text-lg hover:underline">Cafe</a>
+                <a href="" target="_blank" class="text-lg hover:underline">Testimonio</a>
+            </div>
+            <div class="w-full bg-black text-center text-white py-2">
+                <p class="text-sm text-white"><p class="text-sm">© 2024 Colors House Hostal. Todos los derechos reservados.</p>Diseñado por <a href="" class="text-blue-400 hover:underline" target="_blank">Leonel Avendanio</a></p>
+            </div>
+        </footer>
+        
+        <script src="js/index.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script> 
+    </body>
+</html>
