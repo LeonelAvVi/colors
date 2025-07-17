@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Colors House Hostal</title>
+        <title>Spanish Lessons Bolivia</title>
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
         <meta name="description" content="Más que un lugar para dormir. Colors House es un espacio auténtico donde el descanso, la cultura y la aventura se encuentran en armonía en el corazón de Sucre, Bolivia.">
-        <meta name="keywords" content="hostal, hospedaje, Sucre, Bolivia, alojamiento, travel, turismo, backpackers, aventura, descanso">
+        <meta name="keywords" content="Colors House, Hostal, Sucre, Bolivia, Español, Escuela de Español, Aventura, Café, Cultura, Viajes " />
         <meta name="author" content="Colors House Hostal" />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#FEC303" />
@@ -32,22 +32,6 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="./css/styles.css" />
-        <script>
-            tailwind.config = {
-                theme: {
-                extend: {
-                    screens: {
-                    xs: '480px',
-                    },
-                    colors: {
-                    clifford: '#da373d',
-                    },
-                },
-                },
-            }
-        </script>
-        
-
     </head>
     <body>
         <!-- NAVBAR -->
@@ -65,14 +49,12 @@
                 </svg>
                 </button>
 
-                <!-- Menú navegación -->
                 <nav id="menu" class="flex-col space-y-4 md:space-y-0 md:space-x- top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-center md:text-left px-4 py-4 md:py-0">
-                    <a href="#inicio" class="text-color-primary hover:text-blue-600">Inicio</a>
-                    <a href="#info" class="text-white hover:text-blue-600">Agencia</a>
-                    <a href="#hostal" class="text-white hover:text-blue-600">Hostal</a>
-                    <a href="#coffe" class="text-white hover:text-blue-600">Café</a>
-                    <a href="school.html" class="text-white hover:text-blue-600">Escuela</a>
-                    <a href="#activities" class="text-white hover:text-blue-600">Testimonio</a>
+                    <a href="" class="text-color-primary hover:underline hover:transform-scale-105 transition duration-300">Inicio</a>
+                    <a href="school.html" class="text-white hover:underline hover:transform ">Escuela</a>
+                    <a href="hostal.html" class="text-white hover:underline hover:transform ">Hostal</a>
+                    <a href="adventure.html" class="text-white hover:underline hover:transform ">Agencia</a>
+                    <a href="coffee.html" class="text-white hover:underline hover:transform ">Café</a>
                     <a href="#contacto" class="text-black bg-primary py-1 px-4 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">Contacto/Reserva</a>
                 </nav>
             </div>
@@ -89,10 +71,9 @@
                         <span id="icon-button-hostal" class="material-symbols-outlined inactive" onclick="changeService(1)">apartment</span>
                         <span id="icon-button-agency" class="material-symbols-outlined inactive" onclick="changeService(2)">hiking</span>
                         <span id="icon-button-coffee" class="material-symbols-outlined inactive" onclick="changeService(3)">local_cafe</span>
-                        
                     </div>
 
-                    <spam id="description-school" class="" data-aos="fade-left">
+                    <spam id="description-school" class="bg-blue-600" data-aos="fade-left" >
                         <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center"><span class="mr-2">👨‍🏫</span> Spanish School</h2>
                         <p class="text-lg text-gray-300">Español práctico, cultura viva, clases dinámicas y un ambiente amigable para aprender, conversar y compartir experiencias reales entre viajeros.</p>
                     </spam>
@@ -111,17 +92,17 @@
                 </div>
 
                 <div class="lg:w-1/2 flex flex-col z-10 school-banner">
-                    <img src="images/banner-school.webp" alt="Clase" class=" image-banner-1 rounded-xl shadow-lg w-2/5 ml-40 -mb-20 border-tertiary" data-aos="fade-right" />
-                    <img src="images/banner-school2.webp" alt="Estudiante" class="image-banner-2 rounded-xl shadow-lg w-2/5 z-10 border-secondary" data-aos="fade-up"  />
-                    <img src="images/banner-school3.webp" alt="Grupo" class="image-banner-3 rounded-xl shadow-lg w-2/5 ml-32 -mt-16 border-tertiary" data-aos="fade-left" />
+                    <img src="images/banner-school.webp" alt="Clase" class=" image-banner-1 rounded-xl shadow-lg w-2/5 ml-40 -mb-20 border-tertiary object-cover" data-aos="fade-right" />
+                    <img src="images/banner-school2.webp" alt="Estudiante" class="image-banner-2 rounded-xl shadow-lg w-2/5 z-10 border-secondary object-cover" data-aos="fade-up"  />
+                    <img src="images/banner-school3.webp" alt="Grupo" class="image-banner-3 rounded-xl shadow-lg w-2/5 ml-32 -mt-16 border-tertiary object-cover" data-aos="fade-left" />
                 
                 </div>
             </div>
         </section>
-        <section class="bg-white py-16 px-6">
+        <section class="bg-white my-16 px-6">
             <div class="max-w-7xl mx-auto text-center flex flex-col items-center">
                 <p class="text-gray-700 text-lg text-left mb-4 ">Nuestro equipo está compuesto por personas apasionadas por la hospitalidad, los viajes y la cultura. Con calidez, profesionalismo y una sonrisa siempre lista, trabajamos juntos para que cada huésped se sienta bienvenido, acompañado y parte de esta experiencia inolvidable..</p>
-                <div class="services-colors grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 px-32 ">
+                <div class="services-colors grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 px-32 md:mt-8 ">
                     <div class="picture-colors mt-24" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                         <img src="images/colors1.webp" alt="Equipo de Clases" class="rounded-xl min-w-full hover:scale-110 transition-transform duration-300 shadow-lg" />
                         <h3 class="text-xl font-semibold mb-2">Hostel Colors</h3>
@@ -183,7 +164,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-white py-16 px-6">
+        <section class="bg-white my-32 px-6">
             <div class="max-w-7xl mx-auto text-center">
                 <span class="flex flex-col items-start border-bottom-color-primary border-b-6 mb-8" data-aos="fade-right">
                     <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3"><span class="mr-2">🎉</span> Spanish School <span class="text-white ml-3"> Activities</span> </h2>
@@ -272,7 +253,7 @@
             </div>
         </section>
 
-        <section class="bg-coffe py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section bg-fixed">
+        <section id="coffee" class="bg-coffe py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section bg-fixed">
             <div class=" coffee max-w-7xl mx-auto text-center flex flex-row lg:flex-col items-center justify-between gap-10 ">
                 <div class="lg:w-full flex flex-col items-center description-coffee">
                     <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center text-color-black gap-4" data-aos="fade-down">
@@ -304,13 +285,13 @@
                     </div>
                 </div>
                 
-                <button class="bg-primary text-black px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 mt-8" data-aos="fade-down">
+                <button class="bg-primary text-black px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 mt-8 btn-more-info" data-aos="fade-down">
                     <a href="https://www.hostelworld.com/hosteldetails.php/Colors-House-Hostal/Sucre/123456" target="_blank">More Information</a>
                 </button>
             </div>
         </section>
 
-        <section class="bg-hostal py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
+        <section id="agency" class="bg-hostal py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
             <div class="max-w-7xl mx-auto text-center flex flex-col lg:flex-row items-center justify-between gap-10">
                 <div class="lg:w-1/2 flex flex-col items-start" data-aos="fade-right">
                     <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-end text-color-secondary gap-4">
@@ -347,7 +328,7 @@
             </div>
         </section>
 
-        <section class="bg-coffe py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
+        <section id="school" class="bg-coffe py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
             <div class="school lg:max-w-7xl md:max-w-7xl sm:max-w-full w-full lg:w-7xl md:w-7xl sm:w-7xl mx-auto text-center flex flex-col items-center justify-center gap-10">
                 <div class="lg:w-full flex flex-col items-center sm:w-full md:w-full bg-">
                     <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center text-color-black gap-4" data-aos="fade-down">
@@ -385,7 +366,7 @@
                 
                 <a href="school.html" target="_blank">
                     <button
-                        class="bg-primary text-black px-6 py-2 rounded-full hover:text-white hover:bg-black transition-colors duration-300 ease-in-out mt-8"
+                        class="bg-primary text-black px-6 py-2 rounded-full hover:text-white hover:bg-black transition-colors duration-300 ease-in-out mt-8 btn-more-info"
                         data-aos="fade-down"
                     >
                         More Information.
@@ -395,7 +376,7 @@
         </section>
 
         <section class="stadistics bg-primary py-12 px-6 mt-24 ">
-            <div class="max-w-4xl mx-auto text-center text-white flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="max-w-4xl mx-auto text-center text-white flex flex-col lg:flex-row md:flex-row items-center justify-between gap-10">
                 <span class="flex flex-col items-center">
                     <p class="counter border-b-4 border-white pb-1 text-6xl font-bold" data-target="1200">0</p>
                     <p class="text-color-primary w-2/3">Estudiantes contentos</p>
@@ -413,7 +394,7 @@
 
 
 
-        <section class="bg-white py-16 px-6 mt-24">
+        <section class="rewards bg-white my-32 px-6 ">
             <div class="relative max-w-7xl mx-auto overflow-hidden" data-aos="fade-right">
                 <span class="flex flex-col items-start border-bottom-color-primary border-b-6 mb-8">
                     <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3 "><span class="mr-2">👍</span> Opiniones <span class="text-white ml-3"> Reales</span> </h2>
@@ -431,60 +412,60 @@
                 <!-- CARRUSEL -->
                 <div id="scrollContainer" class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
                 <!-- TARJETA 1 -->
-                <div class="min-w-[80%] md:min-w-[45%] snap-start bg-yellow-100 rounded-xl p-6 shadow">
-                    <div class="flex items-center gap-4 mb-4">
-                    <img src="https://i.pravatar.cc/60?img=1" class="w-14 h-14 rounded-full" />
-                    <div>
-                        <h3 class="text-xl font-bold">Luca R.</h3>
-                        <p class="text-sm font-semibold bg-white px-4 rounded-full"> Australia</p>
-                        <p class="text-sm text-gray-500">25-04-2024</p>
+                    <div class="min-w-[80%] md:min-w-[45%] snap-start bg-yellow-100 rounded-xl p-6 shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                        <img src="https://i.pravatar.cc/60?img=1" class="w-14 h-14 rounded-full" />
+                        <div>
+                            <h3 class="text-xl font-bold">Luca R.</h3>
+                            <p class="text-sm font-semibold bg-white px-4 rounded-full"> Australia</p>
+                            <p class="text-sm text-gray-500">25-04-2024</p>
+                        </div>
+                        </div>
+                        <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500 quote" style="font-size: 52px;">format_quote</span>
+                        <p class="italic text-gray-800">"Tomé clases durante una semana mientras me hospedaba en la hostal, ¡y ahora puedo pedir comida y hablar con locales sin problema! El ambiente fue relajado y súper amigable."</p>
                     </div>
-                    </div>
-                    <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500" style="font-size: 52px;">format_quote</span>
-                    <p class="italic text-gray-800">"Tomé clases durante una semana mientras me hospedaba en la hostal, ¡y ahora puedo pedir comida y hablar con locales sin problema! El ambiente fue relajado y súper amigable."</p>
-                </div>
 
-                <!-- TARJETA 2 -->
-                <div class="min-w-[80%] md:min-w-[45%] snap-start bg-rose-100 rounded-xl p-6 shadow">
-                    <div class="flex items-center gap-4 mb-4">
-                    <img src="https://i.pravatar.cc/60?img=2" class="w-14 h-14 rounded-full" />
-                    <div>
-                        <h3 class="text-xl font-bold">Jonas H.</h3>
-                        <p class="text-sm font-semibold bg-white px-4 rounded-full"> Australia</p>
-                        <p class="text-sm text-gray-500">27-04-2024</p>
+                    <!-- TARJETA 2 -->
+                    <div class="min-w-[80%] md:min-w-[45%] snap-start bg-rose-100 rounded-xl p-6 shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                        <img src="https://i.pravatar.cc/60?img=2" class="w-14 h-14 rounded-full" />
+                        <div>
+                            <h3 class="text-xl font-bold">Jonas H.</h3>
+                            <p class="text-sm font-semibold bg-white px-4 rounded-full"> Australia</p>
+                            <p class="text-sm text-gray-500">27-04-2024</p>
+                        </div>
                     </div>
-                </div>
-                <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500" style="font-size: 52px;">format_quote</span>
-                <p class="italic text-gray-800">"Los profesores son pacientes y saben exactamente qué necesita un viajero. Las clases fueron útiles desde el primer día. Además, conocí a otros estudiantes con los que seguí viajando."</p>
-                </div>
+                    <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500 quote" style="font-size: 52px;">format_quote</span>
+                    <p class="italic text-gray-800">"Los profesores son pacientes y saben exactamente qué necesita un viajero. Las clases fueron útiles desde el primer día. Además, conocí a otros estudiantes con los que seguí viajando."</p>
+                    </div>
 
-                <!-- TARJETA 3 -->
-                <div class="min-w-[80%] md:min-w-[45%] snap-start bg-teal-100 rounded-xl p-6 shadow">
-                    <div class="flex items-center gap-4 mb-4">
-                    <img src="https://i.pravatar.cc/60?img=3" class="w-14 h-14 rounded-full" />
-                    <div>
-                        <h3 class="text-xl font-bold">Sheila M.</h3>
-                        <p class="text-sm font-semibold bg-white px-4 rounded-full"> USA</p>
-                        <p class="text-sm text-gray-500">27-04-2024</p>
+                    <!-- TARJETA 3 -->
+                    <div class="min-w-[80%] md:min-w-[45%] snap-start bg-teal-100 rounded-xl p-6 shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                        <img src="https://i.pravatar.cc/60?img=3" class="w-14 h-14 rounded-full" />
+                        <div>
+                            <h3 class="text-xl font-bold">Sheila M.</h3>
+                            <p class="text-sm font-semibold bg-white px-4 rounded-full"> USA</p>
+                            <p class="text-sm text-gray-500">27-04-2024</p>
+                        </div>
+                        </div>
+                        <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500 quote" style="font-size: 52px;">format_quote</span>
+                        <p class="italic text-gray-800">"Perfecto para mochileros. Aprendí lo esencial para moverme por Sudamérica y practicar en mercados, buses y hostales. ¡Mucho mejor que apps!"</p>
                     </div>
-                    </div>
-                    <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500" style="font-size: 52px;">format_quote</span>
-                    <p class="italic text-gray-800">"Perfecto para mochileros. Aprendí lo esencial para moverme por Sudamérica y practicar en mercados, buses y hostales. ¡Mucho mejor que apps!"</p>
-                </div>
 
-                <!-- TARJETA 4 -->
-                <div class="min-w-[80%] md:min-w-[45%] snap-start bg-indigo-100 rounded-xl p-6 shadow">
-                    <div class="flex items-center gap-4 mb-4">
-                    <img src="https://i.pravatar.cc/60?img=4" class="w-14 h-14 rounded-full" />
-                    <div>
-                        <h3 class="text-xl font-bold">Alex P.</h3>
-                        <p class="text-sm font-semibold bg-white px-4 rounded-full"> UK</p>
-                        <p class="text-sm text-gray-500">28-04-2024</p>
+                    <!-- TARJETA 4 -->
+                    <div class="min-w-[80%] md:min-w-[45%] snap-start bg-indigo-100 rounded-xl p-6 shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                        <img src="https://i.pravatar.cc/60?img=4" class="w-14 h-14 rounded-full" />
+                        <div>
+                            <h3 class="text-xl font-bold">Alex P.</h3>
+                            <p class="text-sm font-semibold bg-white px-4 rounded-full"> UK</p>
+                            <p class="text-sm text-gray-500">28-04-2024</p>
+                        </div>
+                        </div>
+                        <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500 quote" style="font-size: 52px;">format_quote</span>
+                        <p class="italic text-gray-800">"Tomé clases durante una semana mientras me hospedaba en la hostal, ¡y ahora puedo pedir comida y hablar con locales sin problema! El ambiente fue relajado y súper amigable."</p>
                     </div>
-                    </div>
-                    <span class="material-symbols-outlined transform scale-y-[-1] scale-x-[-1] text-gray-500" style="font-size: 52px;">format_quote</span>
-                    <p class="italic text-gray-800">"Tomé clases durante una semana mientras me hospedaba en la hostal, ¡y ahora puedo pedir comida y hablar con locales sin problema! El ambiente fue relajado y súper amigable."</p>
-                </div>
                 </div>
 
                 <!-- Botón Derecho -->
@@ -505,7 +486,7 @@
             </div>
         </section>
 
-        <section class="bg-white py-16 px-6 mt-24">
+        <section class="bg-white py-32 px-6 subtitle-section">
             <div class="relative max-w-7xl mx-auto overflow-hidden">
                 <span class="flex flex-col items-start border-bottom-color-primary border-b-6 mb-8" data-aos="fade-right">
                     <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3 "><span class="mr-2">🧭</span> ¿Dónde <span class="text-white ml-3"> estamos?</span> </h2>
@@ -519,9 +500,9 @@
             </div>
         </section>
 
-        <section class=" mb-24">
+        <section class=" mb-24 overflow-hidden">
             <div class=" contact relative max-w-7xl mx-auto overflow-hidden flex flex-row bg-primary shadow-lg rounded-lg"  data-aos="zoom-out">
-                <iframe class="w-2/3 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.318017349494!2d-65.26025760000002!3d-19.049750399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf364b2f753d%3A0xbbdc06f7e107cb7f!2sColors%20House%20Hostel!5e0!3m2!1ses-419!2sbo!4v1749512783051!5m2!1ses-419!2sbo" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe id="frame-maps" class="w-2/3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.318017349494!2d-65.26025760000002!3d-19.049750399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf364b2f753d%3A0xbbdc06f7e107cb7f!2sColors%20House%20Hostel!5e0!3m2!1ses-419!2sbo!4v1749512783051!5m2!1ses-419!2sbo" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <div class="bg-primary text-gray-900 text-left p-4 w-1/3 ">
                     <p class="text-2xl font-bold">Colors House Hostal</p>
@@ -529,7 +510,7 @@
                     <div class="flex flex-row justify-start items-center my-1"><span class="material-symbols-outlined mr-2">phone_callback</span><p class="text-md">+591 75451699</p></div>
                     <div class="flex flex-row justify-start items-center my-1"><span class="material-symbols-outlined mr-2">mail</span><a href="mailto:colors.hostal@gmail.com"> colors.hostal@gmail.com</a></div>	
                     
-                    <div id="contactForm" class="flex flex-col items-start">
+                    <div id="contactForm" class="flex flex-col items-start w-full">
                         <input type="text" placeholder="Name" class="w-full bg-white p-2 mt-4 border-bottom-color-black " />
                         <select class="w-full p-2 mt-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <option value="spanish">Hostal</option>
@@ -592,6 +573,19 @@
             </div>
         </footer>
         
+        <span class="fixed bottom-8 right-8 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300 cursor-pointer" id="chat-button">
+            <span class="absolute -inset-1 rounded-full animate-ping bg-yellow-400 opacity-75"></span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat text-white" viewBox="0 0 16 16">
+                <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8l4 3V4a2 2 0 0 0-2-2H2zm1.5 3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm3.5.5a.5.5 0 1 1-1 .001A.5.5 0 0 1 7.5 5.5zm3.5-.5a.5.5 0 1 1-1 .001A.5.5 0 0 1 11.5 5z"/>
+                <path d="M1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4z"/>
+            </svg>
+        </span>
+
+        <div id="chat-hint" class="fixed bottom-24 right-6 bg-yellow-100 border border-yellow-500 text-black text-sm px-3 py-2 rounded-full shadow-lg opacity-0 translate-y-4 transition-all duration-700 ease-out pointer-events-none">
+            Need help? 👀
+        </div>
+
         <script src="js/index.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>

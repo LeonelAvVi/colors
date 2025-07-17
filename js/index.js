@@ -19,9 +19,6 @@ menuToggle.addEventListener("click", () => {
 });
 
 function scrollLeft() {
-    console.log("Scrolling left");
-    
-    // alert("Scrolling left");
     container.scrollBy({ left: -container.offsetWidth * 0.5, behavior: "smooth" });
 }
 
@@ -50,17 +47,22 @@ function changeService(service) {
     ]
 
     buttons.forEach((btn, index) => {
+        if (!btn) return; // Skip if the element doesn't exist
         if (index === service) {
-            btn.classList.add("active");
-            btn.classList.remove("inactive");
+                btn.classList.add("active");
+                btn.classList.remove("inactive");
+            
         } else {
+            
             btn.classList.remove("active");
             btn.classList.add("inactive");
             btn.classList.remove("hidden");
         }
+        
     });
 
     description.forEach((desc, index) => {
+        if (!desc) return; // Skip if the element doesn't exist
         if (index === service) {
             desc.classList.remove("hidden");
             desc.removeAttribute("data-aos");
@@ -170,7 +172,7 @@ const observer = new IntersectionObserver(
 );
 
 // 👀 Observar el elemento
-observer.observe(bannerMain);
+if (bannerMain) observer.observe(bannerMain);
 
 // autoChangeService();
 
@@ -193,9 +195,7 @@ function changeWeek(day){
             dayElement.classList.remove("day-active");
             dayElement.classList.add("day-inactive");
         }
-    });
-    console.log("Changing week to: " + day);
-    
+    });   
 }
 
 const imagesWeek = [
@@ -238,13 +238,11 @@ function stopAutoChangeWeek() {
 
 function changeWeekImage(newImages) {
     const images = document.querySelectorAll(".image-week img");
-    console.log("Changing week images to: ", newImages);
 
     images.forEach((img, index) => {
         img.classList.remove("aos-animate");
         setTimeout(() => {
-        console.log("Image " + index + ": " + newImages[index]);
-        img.src = newImages[index];
+            img.src = newImages[index];
         AOS.refresh();
         setTimeout(() => {
             img.classList.add("aos-animate");
@@ -285,7 +283,9 @@ const observerWeek = new IntersectionObserver(
 );
 
 // 👀 Observar el elemento
-observerWeek.observe(sectionWeek);
+if (sectionWeek) {
+    observerWeek.observe(sectionWeek);
+}
 
 const counters = document.querySelectorAll('.counter');
 let started = false;
@@ -321,4 +321,17 @@ entries.forEach(entry => {
 }, { threshold: 0.5 });
 
 const section = document.querySelector('.stadistics');
-observerStatic.observe(section);
+if (section) observerStatic.observe(section);
+
+// show chat hint on hover
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const hint = document.getElementById('chat-hint');
+        if (hint) {
+            hint.classList.remove('opacity-0', 'translate-y-4');
+            hint.classList.add('opacity-100', 'translate-y-0');
+        }
+    }, 3000); // 15 segundos
+});
+
+

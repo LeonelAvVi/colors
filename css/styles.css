@@ -113,6 +113,13 @@
     background-color: #1e1e1ecb;
 }
 
+.section-agency{
+    background-image: url(../images/banner-agency3.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1ecb;
+}
+
 .day-active{
     background-color: #FEC303 !important;
     transition: all 0.5s ease-in-out;
@@ -166,6 +173,8 @@
     background-blend-mode: overlay;
     background-color: #D9D9D9cb;
 }
+
+
 .picture-service img{
     
     border-radius: 16px;
@@ -201,9 +210,62 @@ scrollbar-width: none;     /* Firefox */
     border-bottom: 2px solid #1a1a1a;
 }
 
+.border-primary{
+    border-color: #FEC303;
+}
+.border-r-primary
+{
+    border-right-color: #1e1e1e;
+}
+
+.border-l-primary
+{
+    border-left-color: #1e1e1e;
+}
+
+.group::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #facc15; /* Tailwind yellow-400 */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.group:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.group:not(:hover)::before {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.group > * {
+    position: relative;
+    z-index: 10;
+}
 /* media queries */
 /* Mobile */
 @media (max-width: 768px) {
+    p,
+    li,
+    button {
+        font-size: 1em;
+    }
+
+    .subtitle-section {
+        margin-top: 64px;
+        
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
     .coffee{
         flex-direction: column;
     }
@@ -226,6 +288,7 @@ scrollbar-width: none;     /* Firefox */
         width: 46%;
         height: 200px;
     }
+
     .coffee .picture-service {
         display: flex;
         width: 100%;
@@ -233,6 +296,9 @@ scrollbar-width: none;     /* Firefox */
         align-items: center;
         justify-content: center;
         
+    }
+    .coffee .picture-service > div {
+        height: 140px;
     }
     .school {
         flex-direction: column;
@@ -247,9 +313,81 @@ scrollbar-width: none;     /* Firefox */
         align-items: center;
     }
 
+    .banner-iconos > span{
+        width: 48px;
+        height: 48px;
+        font-size: 1.5em;
+    }
+    #description-school > h2,
+    #description-hostal > h2,
+    #description-coffee > h2,
+    #description-agency > h2 {
+        justify-content: center;
+    }
+
+    .stadistics > div {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .stadistics > div > span :nth-child(1) {
+        font-size: 2em;
+    }
+
+    .stadistics > div > span > p {
+        text-align: center;
+        width: 100%;
+    }
+    .rewards {
+        margin-top: 24px;
+    }
+
+    .quote {
+        font-size: 2em !important ;
+    }
+
     .content-banner{
         flex-direction: column-reverse;
     }
+
+    .content-banner-school > p {
+        font-size: 3.5em;
+    }
+
+    .content-banner-agency > div > img:nth-child(1),
+    .content-banner-agency > div > img:nth-child(3) {
+        display: none;
+    }
+    .content-banner-agency > div > img:nth-child(2) {
+        width: 100%;
+        height: 140px;
+        margin: 0;
+    }
+
+    #school .school-info img {
+        width: 40%;
+        height: 125px;
+        object-fit: cover;
+        margin-bottom: 16px;
+    }
+
+    .plans-school div {
+        margin-top: 8px;
+        margin-bottom: 0px;
+    }
+
+    #school .school-info div p {
+        font-size: .8em;
+        padding-left:  32px;
+        padding-right: 32px;
+        padding-bottom: 8px;
+        text-align: center;
+    } 
+
+    .content-banner-school span {
+        font-size: 2em;
+    }
+    
     .school-banner {
         flex-direction: row;
         flex-wrap: wrap;
@@ -259,38 +397,188 @@ scrollbar-width: none;     /* Firefox */
 
     .school-banner .image-banner-1 {
         width: 100%;
-        height: 180px;
+        height: 120px;
         margin: 0;
     }
     .school-banner .image-banner-2 {
        width: 48%;
-        height: 160px;
+        height: 100px;
         margin: 0;
     }
     .school-banner .image-banner-3 {
         width: 48%;
-        height: 160px;
+        height: 100px;
         margin: 0;
     }
+
+    #new-program > div > span {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .activities-school {
+        margin-bottom: 0px;
+    }
+
+    .activities-school div > img{
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+
     #banner {
         text-align: center;
     }
     .services-colors{
-        margin-top: 24px;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
+        margin-top: 32px;
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         padding: 0;
     }
+
     .picture-colors img{
         width: 100%;
-        height: 200px;
-
+        height: 160px;
     }
+
+    .picture-colors h3{
+        text-align: center;
+        font-size: 1em;
+    }
+
     .picture-colors{
         width: 100%;
         margin: 0;
         padding: 0;   
+    }
+
+    .featured-rooms{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .featured-rooms > div {
+        width: 100%;
+        height: 200px;
+        margin: 0;
+        overflow: hidden;
+    }
+    .featured-rooms img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .featured-rooms > div:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    .featured-rooms > div:nth-child(5) {
+        flex-direction: row;
+    }
+
+    .shared-dorm > img:nth-child(1),
+    .shared-dorm > img:nth-child(3) {
+        display: none;
+    }
+
+    .shared-dorm > img:nth-child(2) {
+        margin: 0;
+    }
+    .card-traveling {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-traveling > div:nth-child(2),
+    .card-traveling > div:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+
+
+
+    .card-traveling > div > div > p {
+        display: none;
+    }
+    .section-agency {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .section-agency > div > p:nth-child(1) {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .section-agency > div > div {
+        width: 100%;
+    }
+
+    .section-agency > div > div > button {
+        width: 50%;
+    }
+
+    #agency-contact > div:nth-child(2) > div:nth-child(1) {
+        display: none;
+    }
+
+    .banner-coffee .content-banner{
+        flex-direction: column;
+    }
+    .banner-coffee .content-banner > p:nth-child(1) {
+        font-size: 3.5em;
+        text-align: center;
+    }
+
+    #popular-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    #popular-menu > div {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    #popular-menu > div > img {
+        width: 100%;
+        height: 92px;
+        object-fit: cover;
+    }
+
+    #popular-menu > div > div {
+        padding: 4px;
+    }
+
+    #popular-menu > div > div > p{
+        line-height: 1.2em;
+        font-size: .8em;
+    }
+
+    #popular-menu > div > div > span{
+        font-size: 1em;
+    }
+
+    #items-perks {
+        margin-top: 32px;
+        padding-top: 32px;
+    }
+
+    #items-perks > div {
+        min-width: 160px;
+        max-width: 160px;
+        padding-bottom: 0px;
+    }
+
+    #items-perks > div > h3 {
+        font-size: 1em;
+    }
+
+    #items-perks > div > p {
+        font-size: 2em;
+        text-align: center;
     }
 
     h2{
@@ -342,14 +630,36 @@ scrollbar-width: none;     /* Firefox */
     }
 
     .image-activities > div{
-        height: 200px;
+        height: 180px;
     }
+
+    .image-activities > div > div{
+        font-size: 1em;
+    }
+
     #hostal {
         width: 100%;
         max-width: 100vw;
         overflow: hidden;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+    #coffee,
+    #agency,
+    #school {
+        padding-top: 64px;
+        padding-bottom: 64px;
     }
 
+    #agency > div > div,
+    #hostal > div > div {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-more-info{
+        margin-top: 4px;
+    }
     .hostal-service {
         width: 100%;
         max-width: 100%;
@@ -362,7 +672,7 @@ scrollbar-width: none;     /* Firefox */
 
     .hostal-service > div {
         
-        height: 200px;
+        height: 120px;
     }
 
     .description-coffee h2 {
@@ -385,17 +695,17 @@ scrollbar-width: none;     /* Firefox */
     }
     .hiking-service :nth-child(1){
         width: 100%;
-        height: 200px;
+        height: 140px;
         margin: 0;
     }
     .hiking-service :nth-child(2){
         width: 47%;
-        height: 200px;
+        height: 140px;
         margin: 0;
     }
     .hiking-service :nth-child(3){
         width: 47%;
-        height: 200px;
+        height: 140px;
         margin: 0;
     }
 
@@ -415,37 +725,35 @@ scrollbar-width: none;     /* Firefox */
         justify-content: center;
     }
 
-
-
     .school-service :nth-child(1){
         width: 100%;
-        height: 200px;
+        height: 140px;
         margin: 0;
     }
 
     .school-service :nth-child(2){
         width: 47%;
-        height: 200px;
+        height: 140px;
         margin: 0;
     }
 
     .school-service :nth-child(3){
         width: 47%;
-        height: 200px;
+        height: 140px;
         margin: 0;
     }
 
     .gallery-content {
+        height: auto;
         max-width: 100vw;
         overflow: hidden;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 200px);
+        grid-template-rows: repeat(4, 120px);
     }
 
     .gallery-content img{
-        height: 200px;
-        min-height: 200px;
-        
+        height: 120px;
+        min-height: 120px;
     }
     
     .gallery-content :nth-child(1) {
@@ -479,7 +787,7 @@ scrollbar-width: none;     /* Firefox */
     }
     .contact iframe {
         width: 100%;
-        height: 400px;
+        height: 320px;
     }
 
     .contact>div{
@@ -529,5 +837,8 @@ scrollbar-width: none;     /* Firefox */
     
     #new-program{
         padding: 16px;
+    }
+    #chat-hint {
+        font-size: .7em ;
     }
 }
