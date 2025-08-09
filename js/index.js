@@ -335,3 +335,39 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/// botones de modal
+// solo buscar si estamos en la pagina adventure.html
+
+if (window.location.pathname.includes('adventure.html')) {
+
+    const setupModal = (btnId, modalId, closeId) => {
+        const btn = document.getElementById(btnId);
+        const modal = document.getElementById(modalId);
+        const closeBtn = document.getElementById(closeId);
+
+        if (!btn || !modal || !closeBtn) return;
+
+        btn.addEventListener('click', () => {
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    };
+
+    const modals = [
+        ['btn-modal-uyuni', 'modal-salar', 'close-modal'],
+        ['btn-modal-campesino', 'modal-campesino', 'close-modal-campesino'],
+        ['btn-modal-climbing', 'modal-climbing', 'close-modal-climbing'],
+        ['btn-modal-horse', 'modal-horse', 'close-modal-horse'],
+        ['btn-modal-minas', 'modal-minas', 'close-modal-minas'],
+        ['btn-modal-walk', 'modal-walk', 'close-modal-walk']
+    ];
+
+    modals.forEach(([btnId, modalId, closeId]) => setupModal(btnId, modalId, closeId));
+}
+
+

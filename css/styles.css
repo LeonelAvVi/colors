@@ -251,6 +251,19 @@ scrollbar-width: none;     /* Firefox */
     position: relative;
     z-index: 10;
 }
+
+.modal {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
 /* media queries */
 /* Mobile */
 @media (max-width: 768px) {
@@ -840,5 +853,16 @@ scrollbar-width: none;     /* Firefox */
     }
     #chat-hint {
         font-size: .7em ;
+    }
+
+    .btn-close{
+        /* background-color: #1e1e1e; */
+        top: 90;
+        right: 0;
+    }
+
+    #price-modal{
+        bottom: 0;
+        right:  calc(50% - 100px);
     }
 }
