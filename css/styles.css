@@ -11,6 +11,18 @@
     transition: all 0.3s ease-in-out;
 }
 
+header {
+    z-index: 1000;
+}
+
+.z-1000 {
+    z-index: 1000;
+}
+
+.z-100 {
+    z-index: 100;
+}
+
 .active-btn{
     color: #1E1E1E;
     background-color: #FEC303;
