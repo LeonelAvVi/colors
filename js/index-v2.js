@@ -359,15 +359,25 @@ if (window.location.pathname.includes('adventure.html')) {
     };
 
     const modals = [
-        ['btn-modal-uyuni', 'modal-salar', 'close-modal'],
-        ['btn-modal-campesino', 'modal-campesino', 'close-modal-campesino'],
-        ['btn-modal-climbing', 'modal-climbing', 'close-modal-climbing'],
-        ['btn-modal-horse', 'modal-horse', 'close-modal-horse'],
-        ['btn-modal-minas', 'modal-minas', 'close-modal-minas'],
-        ['btn-modal-walk', 'modal-walk', 'close-modal-walk']
+        ['btn-modal-uyuni', 'salar-uyuni', 'close-modal'],
+        ['btn-modal-campesino', 'campesino', 'close-modal-campesino'],
+        ['btn-modal-climbing', 'climbing', 'close-modal-climbing'],
+        ['btn-modal-horse', 'horse', 'close-modal-horse'],
+        ['btn-modal-minas', 'minas', 'close-modal-minas'],
+        ['btn-modal-walk', 'walk', 'close-modal-walk']
     ];
 
     modals.forEach(([btnId, modalId, closeId]) => setupModal(btnId, modalId, closeId));
 }
 
 
+const modals = ['salar-uyuni', 'campesino', 'climbing', 'horse', 'minas', 'walk'];
+const currentHash = window.location.hash.slice(1); // elimina el "#"
+
+if (modals.includes(currentHash)) {
+    const modal = document.getElementById(currentHash);
+    if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+}
