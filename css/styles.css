@@ -284,6 +284,25 @@ scrollbar-width: none;     /* Firefox */
     button {
         font-size: 1em;
     }
+    #salar-uyuni, #campesino, #climbing, #horse, #minas, #walk {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .modal-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .modal-card{
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+    .modal-card > div,
+    .modal-card > img{
+        width: 100%;
+    }   
 
     .subtitle-section {
         margin-top: 64px;
@@ -779,6 +798,7 @@ scrollbar-width: none;     /* Firefox */
     .gallery-content img{
         height: 120px;
         min-height: 120px;
+        max-height: 20px;
     }
     
     .gallery-content :nth-child(1) {
@@ -869,8 +889,13 @@ scrollbar-width: none;     /* Firefox */
 
     .btn-close{
         /* background-color: #1e1e1e; */
-        top: 90;
+        top: 120px;
         right: 0;
+    }
+
+    #price-modal{
+        padding: 4px 16px;
+        bottom: 18px;
     }
 
     #price-modal{

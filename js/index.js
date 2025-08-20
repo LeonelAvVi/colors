@@ -177,6 +177,7 @@ if (bannerMain) observer.observe(bannerMain);
 // autoChangeService();
 
 function changeWeek(day){
+    weekIndex = day - 1 ;
     const week = [
         document.getElementById("week-monday"),
         document.getElementById("week-tuesday"),
@@ -186,11 +187,13 @@ function changeWeek(day){
         document.getElementById("week-saturday"),
         document.getElementById("week-sunday")
     ]
+    console.log("cambiando semana a: ", day);
+    
     week.forEach((dayElement, index) => {
         if (index+1 === day) {
             dayElement.classList.remove("day-inactive");
             dayElement.classList.add("day-active");
-            changeWeekImage(imagesWeek[index+1]);
+            changeWeekImage(imagesWeek[index]);
         } else {
             dayElement.classList.remove("day-active");
             dayElement.classList.add("day-inactive");
@@ -258,7 +261,7 @@ function autoChangeWeek() {
         weekIndex = (weekIndex + 1) % imagesWeek.length;
         changeWeek(weekIndex + 1); // Cambia al siguiente día de la semana
         changeWeekImage(imagesWeek[weekIndex]); // Cambia a la imagen correspondiente
-    }, 3000); // Cambia cada 3 segundos
+    }, 5000); // Cambia cada 3 segundos
 }
 
 const sectionWeek = document.getElementById("week");
@@ -360,7 +363,7 @@ if (window.location.pathname.includes('adventure.html')) {
 
     const modals = [
         ['btn-modal-uyuni', 'salar-uyuni', 'close-modal'],
-        ['btn-modal-campesino', 'campesino', 'close-modal-campesino'],
+        ['btn-modal-maragua', 'maragua', 'close-modal-maragua'],
         ['btn-modal-climbing', 'climbing', 'close-modal-climbing'],
         ['btn-modal-horse', 'horse', 'close-modal-horse'],
         ['btn-modal-minas', 'minas', 'close-modal-minas'],

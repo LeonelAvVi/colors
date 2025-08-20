@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
         <link rel="stylesheet" href="./src/output-v1.css" >
-        <link rel="stylesheet" href="./css/styles-v1.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
         
     </head>
     <body>
@@ -224,8 +224,8 @@
                         </div>
                     </div>
                     <div id="image-week" class="flex flex-col items-center max-w-1/2 image-week" > 
-                        <img id="week-image-1" src="images/week/monday1.webp" alt="Aventura 1" class="rounded-xl shadow-lg w-3/5 mb-4 border-tertiary ml-40" data-aos="fade-left"/>
-                        <img id="week-image-2" src="images/week/monday2.webp" alt="Aventura 1" class="rounded-xl shadow-lg w-3/5 mb-4 border-secondary -mt-24" data-aos="fade-right"/>
+                        <img id="week-image-1" src="images/week/monday1.webp" alt="week 1" class="rounded-xl shadow-lg w-3/5 mb-4 border-tertiary ml-40 max-h-80 object-cover" style="max-height: 252px; min-width: 320px;" data-aos="fade-left"/>
+                        <img id="week-image-2" src="images/week/monday2.webp" alt="week 2" class="rounded-xl shadow-lg w-3/5 mb-4 border-secondary -mt-24 max-h-80 object-cover" style="max-height: 252px; min-width: 320px;" data-aos="fade-right"/>
                     </div>
                 </div>
             </div>
@@ -310,14 +310,16 @@
         </section>
 
         
-        <section id="gallery-coffee" class="bg-gallery py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section">
+        <section id="gallery-coffee" class="bg-gallery py-32 px-6 border-bottom-color-primary border-bottom-width-4 border-section"
+            style="background-image: url('images/bg-gallery-coffee.webp');"
+        >
             <div class="gallery-content max-w-7xl mx-auto text-center grid grid-cols-4 grid-rows-2 gap-4">
-                <img src="images/gallery-one.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-down" />
-                <img src="images/gallery-two.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-up" />
-                <img src="images/gallery-three.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-span-2 col-start-1 row-start-2" data-aos="fade-down" />
-                <img src="images/gallery-four.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover col-start-3 row-start-1" data-aos="fade-right" />
-                <img src="images/gallery-five.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover row-span-2 col-start-4 row-start-1" data-aos="fade-up" />
-                <img src="images/gallery-six.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover col-start-3" data-aos="fade-left" />
+                <img src="images/gallery/coffee/gallery1.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-down" />
+                <img src="images/gallery/coffee/gallery2.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-up" />
+                <img src="images/gallery/coffee/gallery3.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-span-2 col-start-1 row-start-2" data-aos="fade-down" />
+                <img src="images/gallery/coffee/gallery4.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover col-start-3 row-start-1" data-aos="fade-right" />
+                <img src="images/week/friday2.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover row-span-2 col-start-4 row-start-1" data-aos="fade-up" />
+                <img src="images/bg-gallery-coffee.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover col-start-3" style="max-height: 252px;" data-aos="fade-left" />
             </div>
         </section>
         
@@ -377,7 +379,7 @@
         </div>
 
         
-        <script src="js/index-v2.js"></script>
+        <script src="js/index.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();
