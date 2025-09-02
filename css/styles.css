@@ -11,6 +11,15 @@
     transition: all 0.3s ease-in-out;
 }
 
+.gallery-card-hostal{
+    width: 52px;
+    max-width: 52px;
+    height: 36px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin: 4px;
+}
+
 header {
     z-index: 1000;
 }
@@ -125,6 +134,13 @@ header {
     background-color: #1e1e1ecb;
 }
 
+.new-programs-section{
+    background-image: url(../images/newprograms.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1ecb;
+}
+
 .section-agency{
     background-image: url(../images/banner-agency3.webp);
     background-size: cover;
@@ -174,6 +190,22 @@ header {
     background-color: #1e1e1ecb;
 }
 
+.bg-school{
+    background-image: url(../images/newprograms.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #D9D9D9cb;
+}
+
+
+.bg-agency{
+    background-image: url(../images/bg-banner-agency.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1ecb;
+    background-position: center;
+}
+
 .border-section{
     
     border-bottom: 8px solid #FEC303;
@@ -213,6 +245,27 @@ scrollbar-width: none;     /* Firefox */
     background-size: cover;
     background-blend-mode: overlay;
     background-color: #1e1e1ecb;
+}
+
+#gallery-school{
+    background-image: url(../images/newprograms.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #1e1e1ecb;
+}
+.modal-gallery-thumbnails > img {
+    width: 58px;
+    height: 58px;
+    margin: 0 4px;
+    
+}
+
+.modal-gallery-thumbnails > img:hover {
+    transform: scale(1.05);
+}
+
+#gallery-agency{
+    background-image: url(../images/agency/horse2.webp);
 }
 
 #contactForm input[type="text"],

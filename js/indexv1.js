@@ -384,3 +384,164 @@ if (modals.includes(currentHash)) {
         document.body.style.overflow = 'hidden';
     }
 }
+
+function showModal(modalId) {
+    const modal = document.getElementById('modalHostal');
+    if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('modalHostal');
+    if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+let imagesData = [
+"images/activity1.webp",
+"images/activity2.webp",
+"images/activity4.webp",
+"images/activity3.webp",
+"images/banner-coffee3.webp"
+];
+
+let currentIndex = 0;
+const mainImage = document.getElementById("main-image");
+const thumbnails = document.querySelectorAll(".thumbnail");
+
+function updateGallery(index) {
+currentIndex = index;
+mainImage.classList.add("opacity-0");
+
+setTimeout(() => {
+    mainImage.src = imagesData[currentIndex];
+    mainImage.classList.remove("opacity-0");
+}, 300);
+
+thumbnails.forEach((thumb, i) => {
+    thumb.classList.toggle("border-primary", i === currentIndex);
+});
+}
+
+  thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => {
+      console.log(`Thumbnail ${index} clicked`);
+      updateGallery(index);
+    });
+  });
+
+function changeImageModal(index){
+console.log(`Changing modal image to ${index}`);
+}
+
+// Autoplay cada 3 segundos
+
+
+if (window.location.pathname.includes('hostal.html')) {
+    setInterval(() => {
+        const nextIndex = (currentIndex + 1) % imagesData.length;
+        updateGallery(nextIndex);
+    }, 3000);
+
+    updateGallery(0);
+}
+// modals hostal
+
+    const FamilyImage = [
+        "images/hostal/card1.webp",
+        "images/hostal/Family1.webp",
+        "images/hostal/Family2.webp",
+        "images/hostal/Family3.webp",
+        "images/hostal/Family4.webp"
+    ]
+
+    const familyRoomImages = [
+        "images/hostal/card2.webp",
+        "images/hostal/roomfamily1.webp",
+        "images/hostal/roomfamily2.webp",
+        "images/hostal/roomfamily3.webp",
+        "images/hostal/roomfamily4.webp",
+        "images/hostal/roomfamily5.webp",
+        "images/hostal/roomfamily6.webp",
+        "images/hostal/roomfamily7.webp"
+    ]
+
+    const queenRoomImages = [
+        "images/hostal/card3.webp",
+        "images/hostal/queen1.webp",
+    ]
+
+    const queenRoomTwoImages = [
+        "images/hostal/card4.webp",
+        "images/hostal/queenroom1.webp",
+        "images/hostal/queenroom2.webp",
+        "images/hostal/queenroom3.webp",
+        "images/hostal/queenroom3-1.webp"
+    ]
+
+    const twinRoomImages = [
+        "images/hostal/card5.webp",
+        "images/hostal/twin1.webp",
+        "images/hostal/twin2.webp",
+    ]
+
+    const suiteFamilyImages = [
+        "images/hostal/card6.webp",
+    ]
+
+
+function showModalHostal(index) {
+
+    let mainImage = document.getElementById("main-image");
+    let thumbnailDescription = document.getElementById("thumbnail-description");
+
+    switch(index){
+        case 1:
+            imagesData = FamilyImage
+            break
+        case 2:
+            imagesData = familyRoomImages
+            break
+        case 3:
+            imagesData = queenRoomImages
+            break
+        case 4:
+            imagesData = queenRoomTwoImages
+            break
+        case 5:
+            imagesData = twinRoomImages
+            break
+        case 6:
+            imagesData = suiteFamilyImages
+            break
+    }
+
+    mainImage.src = imagesData[0];
+
+    thumbnailDescription.innerHTML = imagesData.map((src, index) => `
+        <img src="${src}" alt="Thumbnail ${index }" class="w-1/4 cursor-pointer thumbnail" onclick="changeImageModal(${index})">
+    `).join('');
+
+    showModal('modalHostal')
+}
+
+
+const btnButtonFormSend = document.getElementById("button-form-send");
+
+btnButtonFormSend.addEventListener("click", () => {
+    const name = document.getElementById("name-form").value;
+    const type = document.getElementById("type-form").value;
+    const message = document.getElementById("message-form").value;
+
+    const messageSente = `Hi, my name is ${name}. I'm interested in the ${type} and would like to say: ${message}`;
+
+    // enviar mensaje de whatsapp
+    const whatsappUrl = `https://wa.me/59175451699?text=${encodeURIComponent(messageSente)}`;
+    console.log(whatsappUrl);
+    
+    window.open(whatsappUrl, '_blank');
+});

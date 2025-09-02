@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Generador de PDF</title>
+
+    <!-- CDN de Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Librerías de JavaScript para la generación del PDF -->
+    <!-- html2canvas: Convierte un elemento HTML en una imagen (canvas) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- jsPDF: Crea y guarda un documento PDF a partir de una imagen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Estilos adicionales para mejorar la presentación -->
+    <style>
+        body {
+            background-color: #ffe388;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <!-- Contenedor del formulario a ser capturado -->
+    <div id="form-container" class="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md">
+        <form id="test-form" class="">
+            
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Spanish Lessons Bolivia</h2>
+            <p>Form of Registration</p>
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Student E-Mail:<span style="color: #ff0000;" >*</span></label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="example@example.com">
+            </div>
+
+            <!-- Campo de Correo Electrónico -->
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Student Name:<span style="color: #ff0000;" >*</span></label>
+                <div class="flex row gap-4" >
+                    <input type="email" id="first-name" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="First name">
+                    <input type="email" id="surname" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Last name">
+                </div>
+            </div>
+
+            <div class="mb-4 flex row gap-4">
+                <div class="w-full">
+                    <label for="name" class="block text-gray-700 font-semibold mb-2">Cell Number:<span style="color: #ff0000;" >*</span></label>
+                    <div class="flex row gap-4" >
+                        <input type="tel" id="country-code" name="cell-number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Country code">
+                        <input type="tel" id="area-code" name="cell-number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Area code">
+                        <input type="tel" id="cell-number" name="cell-number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Phone number">
+                    </div>
+                </div>
+
+                <div class="w-full">
+                    <label for="name" class="block text-gray-700 font-semibold mb-2">Date of Birth:<span style="color: #ff0000;" >*</span></label>
+                    <input type="date" id="dob" name="dob" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="DD/MM/YYYY">
+                </div>
+            </div>
+
+            <div class="mb-4 w-full">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Address:<span style="color: #ff0000;" >*</span></label>
+                <div class="flex row gap-4 mb-4">
+                    <input type="text" id="city" name="city" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="City">
+                    <input type="text" id="state" name="state" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="State / Province">
+                </div>
+                <input type="text" id="country" name="country" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Country">
+            </div>
+
+            <div class="mb-4 w-full">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Student Level:<span style="color: #ff0000;" >*</span></label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" data-component="dropdown" required="" aria-label="STUDENT LEVEL">
+                    <option value="">Please Select</option>
+                    <option value="No Spanish">No Spanish</option>
+                    <option value="I can form basic sentences &amp; ask/answer simple questions">I can form basic sentences &amp; ask/answer simple questions</option>
+                    <option value="I can carry on limited casual conversations &amp; discuss my personal life">I can carry on limited casual conversations &amp; discuss my personal life</option>
+                    <option value="I can speak at a normal speed &amp; have a fairly extensive vocabulary">I can speak at a normal speed &amp; have a fairly extensive vocabulary</option>
+                    <option value="I can carry on conversations with ease &amp; have extensive vocabulary">I can carry on conversations with ease &amp; have extensive vocabulary</option>
+                </select> 
+            </div>
+
+            <p class="w-full text-center text-2xl font-bold my-4 py-4 border-gray-400 border-solid border-y-2 mt-8" >STUDENT COURSE REGISTRATION</p>
+
+            <div class="mb-4 w-full">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">1:1 In-Person Class Package BUNDLE Selection<span style="color: #ff0000;" >*</span></label>
+                <div class="flex flex-col">
+                    <div class="flex mb-2">
+                        <input type="radio" id="bundle1" name="bundle" class="mr-2" value="Bundle 1=10 hours (2 hour classes during PM Hours between 12-7 PM) 73 USD or 500 BOB">
+                        <label for="bundle1" class="mr-2">Bundle 1=10 hours (2 hour classes during PM Hours between 12-7 PM) 73 USD or 500 BOB</label>
+                    </div>
+                    <div class="flex mb-2">
+                        <input type="radio" id="bundle2" name="bundle" class="mr-2" value="Bundle 2=15 hours(3 hour classes during AM or PM Hours between 8 AM-7 PM) 103 USD or 705 BOB">
+                        <label for="bundle2" class="mr-2">Bundle 2=15 hours(3 hour classes during AM or PM Hours between 8 AM-7 PM) 103 USD or 705 BOB</label>
+                    </div>
+                    <div class="flex mb-2">
+                        <input type="radio" id="bundle3" name="bundle" class="mr-2" value="Bundle 3=20 hours (4 hour classes during AM or PM Hours between 8 AM-7 PM) 132 USD or 900 BOB">
+                        <label for="bundle3" class="mr-2">Bundle 3=20 hours (4 hour classes during AM or PM Hours between 8 AM-7 PM) 132 USD or 900 BOB</label>
+                    </div>
+                    <div class="flex mb-2">
+                        <input type="radio" id="bundle4" name="bundle" class="mr-2" value="Bundle 4=40 hours (8 hour classes during AM or PM Hours between 8 AM-7 PM) 251 USD or 1,720 BOB">
+                        <label for="bundle4" class="mr-2">Bundle 4=40 hours (8 hour classes during AM or PM Hours between 8 AM-7 PM) 251 USD or 1,720 BOB</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 w-full">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Select Frequency of Classes per Week (# of 2-8 hour classes)<span style="color: #ff0000;" >*</span></label>
+                <div class="flex flex-col">
+                    <div class="flex mb-2">
+                        <input type="radio" id="frequency1" name="frequency" class="mr-2" value="1 x week">
+                        <label for="frequency1" class="mr-2">1 x week</label>
+                    </div>
+                    <div class="flex mb-2">
+                        <input type="radio" id="frequency2" name="frequency" class="mr-2" value="2 x week">
+                        <label for="frequency2" class="mr-2">2 x week</label>
+                    </div>
+                    <div class="flex mb-2">
+                        <input type="radio" id="frequency3" name="frequency" class="mr-2" value="3 x week">
+                        <label for="frequency3" class="mr-2">3 x week</label>
+                    </div>
+                    <div class="flex mb-2">
+                        <input type="radio" id="frequency4" name="frequency" class="mr-2" value="4 x week">
+                        <label for="frequency4" class="mr-2">4 x week</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 w-full">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">What day/s work best for you?<span style="color: #ff0000;" >*</span></label>
+                <div class="flex flex-row w-full gap-4 flex-wrap">
+                    <div class="flex mb-2 items-center">
+                        <input type="checkbox" id="monday" name="day" class="mr-2" value="Monday">
+                        <label for="monday" class="mr-2">Monday</label>
+                    </div>
+                    <div class="flex mb-2 items-center">
+                        <input type="checkbox" id="tuesday" name="day" class="mr-2" value="Tuesday">
+                        <label for="tuesday" class="mr-2">Tuesday</label>
+                    </div>
+                    <div class="flex mb-2 items-center">
+                        <input type="checkbox" id="wednesday" name="day" class="mr-2" value="Wednesday">
+                        <label for="wednesday" class="mr-2">Wednesday</label>
+                    </div>
+                    <div class="flex mb-2 items-center">
+                        <input type="checkbox" id="thursday" name="day" class="mr-2" value="Thursday">
+                        <label for="thursday" class="mr-2">Thursday</label>
+                    </div>
+                    <div class="flex mb-2 items-center">
+                        <input type="checkbox" id="friday" name="day" class="mr-2" value="Friday">
+                        <label for="friday" class="mr-2">Friday</label>
+                    </div>
+                    <div class="flex mb-2 items-center">
+                        <input type="checkbox" id="saturday" name="day" class="mr-2" value="Saturday">
+                        <label for="saturday" class="mr-2">Saturday (8 AM-12 PM ONLY)</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 w-full">
+                <label for="name" class="block text-gray-700 font-semibold mb-2"> What time work best for you? NOTE: All classes must end at 7 PM Monday-Friday or at 12 PM on Saturday<span style="color: #ff0000;" >*</span></label>
+                <div class="flex flex-row w-full gap-4 flex-wrap">
+                    <select class="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" data-component="dropdown" required="" aria-label="first-choise">
+                        <option value="">First Choice</option>
+                        <option value="8 AM">8 AM</option>
+                        <option value="9 AM">9 AM</option>
+                        <option value="10 AM">10 AM</option>
+                        <option value="11 AM">11 AM</option>
+                        <option value="12 PM">12 PM</option>
+                        <option value="1 PM">1 PM</option>
+                        <option value="2 PM">2 PM</option>
+                        <option value="3 PM">3 PM</option>
+                        <option value="4 PM">4 PM</option>
+                        <option value="5 PM">5 PM</option>
+                        <option value="6 PM">6 PM</option>
+                        <option value="7 PM">7 PM</option>
+                    </select>
+                    <select class="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" data-component="dropdown" required="" aria-label="second-choice">
+                        <option value="">Second Choice</option>
+                        <option value="8 AM">8 AM</option>
+                        <option value="9 AM">9 AM</option>
+                        <option value="10 AM">10 AM</option>
+                        <option value="11 AM">11 AM</option>
+                        <option value="12 PM">12 PM</option>
+                        <option value="1 PM">1 PM</option>
+                        <option value="2 PM">2 PM</option>
+                        <option value="3 PM">3 PM</option>
+                        <option value="4 PM">4 PM</option>
+                        <option value="5 PM">5 PM</option>
+                        <option value="6 PM">6 PM</option>
+                        <option value="7 PM">7 PM</option>
+                    </select>
+                    <select class="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" data-component="dropdown" required="" aria-label="third-choice">
+                        <option value="">Third Choice</option>
+                        <option value="8 AM">8 AM</option>
+                        <option value="9 AM">9 AM</option>
+                        <option value="10 AM">10 AM</option>
+                        <option value="11 AM">11 AM</option>
+                        <option value="12 PM">12 PM</option>
+                        <option value="1 PM">1 PM</option>
+                        <option value="2 PM">2 PM</option>
+                        <option value="3 PM">3 PM</option>
+                        <option value="4 PM">4 PM</option>
+                        <option value="5 PM">5 PM</option>
+                        <option value="6 PM">6 PM</option>
+                        <option value="7 PM">7 PM</option>
+                    </select>
+                </div>
+            </div> 
+
+            <div class="w-full my-8">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Start Date:<span style="color: #ff0000;" >*</span></label>
+                <input type="date" id="dob" name="dob" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="DD/MM/YYYY">
+            </div>
+
+            <div class="mb-4 w-full">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">GROUP Class Package BUNDLE Selection (2-5 Students/group)</label>
+                <div class="flex flex-row w-full gap-4 flex-wrap">
+                    <div class="flex mb-2 items-center">
+                        <input type="radio" id="monday" name="day" class="mr-2" value="Monday">
+                        <label for="monday" class="mr-2">Bundle 5=48 hours (3-8 hour classes during AM or PM Hours between 8 AM-7 PM) 210 USD or 1440 BOB per STUDENT NOTE: ALL STUDENTS MUST BE AT THE SAME LEVEL OR BEGINNERS</label>
+                    </div>
+                    <div class="flex mb-2 items-center">
+                        <input type="radio" id="tuesday" name="day" class="mr-2" value="Tuesday">
+                        <label for="tuesday" class="mr-2">Bundle 6=20 hours (4 hour classes during AM or PM Hours between 8 AM-7 PM) 88 USD or 600 BOB per STUDENT</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Campo de Mensaje -->
+            <div class="mb-6">
+                <label for="message" class="block text-gray-700 font-semibold mb-2"> Please enter any additional comments, questions or specific requests that you would like us to be aware of in the following box </label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <!-- Botón para guardar el PDF -->
+            <div class="text-center">
+                <button type="submit" id="save-pdf-btn" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">
+                    Guardar como PDF
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('test-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío tradicional del formulario
+
+            const formContainer = document.getElementById('form-container');
+            const submitButton = document.getElementById('save-pdf-btn');
+
+            // Oculta el botón para que no aparezca en la captura del PDF
+            submitButton.style.display = 'none';
+
+            // Captura el elemento del formulario y lo convierte en un canvas (imagen)
+            html2canvas(formContainer, { scale: 2 }).then(canvas => {
+                // Restaura el botón a su estado original
+                submitButton.style.display = 'block';
+
+                // Convierte el canvas a una URL de imagen base64
+                const imgData = canvas.toDataURL('image/png');
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF('p', 'mm', 'a4'); // 'p' = portrait, 'mm' = milímetros, 'a4' = tamaño de página
+                
+                // Obtiene las propiedades de la imagen para ajustar el tamaño en el PDF
+                const imgProps = pdf.getImageProperties(imgData);
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+                // Añade la imagen al documento PDF
+                pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                
+                // Guarda el archivo PDF en el dispositivo del usuario
+                pdf.save("formulario_de_prueba.pdf");
+
+                // Muestra una alerta de confirmación
+                setTimeout(() => {
+                    alert('¡El formulario se ha guardado como PDF con éxito!');
+                }, 500);
+
+                // Opcional: Limpia los campos del formulario
+                this.reset();
+            });
+        });
+    </script>
+
+</body>
+</html>
