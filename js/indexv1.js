@@ -435,7 +435,8 @@ thumbnails.forEach((thumb, i) => {
   });
 
 function changeImageModal(index){
-console.log(`Changing modal image to ${index}`);
+    let mainImage = document.getElementById("main-image");
+    mainImage.src = imagesData[index];
 }
 
 // Autoplay cada 3 segundos

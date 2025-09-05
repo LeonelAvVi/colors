@@ -590,7 +590,8 @@ scrollbar-width: none;     /* Firefox */
     }
 
     .card-traveling > div:nth-child(2),
-    .card-traveling > div:nth-child(3) {
+    .card-traveling > div:nth-child(3),
+    .card-traveling > div:nth-child(6) {
         flex-direction: row-reverse;
     }
 
