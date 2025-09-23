@@ -173,6 +173,11 @@ header {
 .border-bottom-color-primary{
     border-color: #FEC303;
 }
+
+.border-bottom-color-primary{
+    border-color: #FEC303;
+}
+
 .bg-primary{
     background-color: #FEC303;
 }
@@ -181,8 +186,16 @@ header {
     background-image: url(../images/bg-legend.webp);
     background-size: cover;
     background-blend-mode: overlay;
-    background-color: #FEC303cb;
+    background-color: #ffffffcb;
 }
+
+.legend-school{
+    background-image: url(../images/newprograms.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #222222ee;
+}
+
 .bg-hostal{
     background-image: url(../images/aventure.webp);
     background-size: cover;
@@ -206,9 +219,12 @@ header {
     background-position: center;
 }
 
-.border-section{
-    
+.border-section{  
     border-bottom: 8px solid #FEC303;
+}
+
+.border--top-section{  
+    border-top: 8px solid #FEC303;
 }
 
 .bg-coffe{
@@ -329,6 +345,18 @@ scrollbar-width: none;     /* Firefox */
     transform: translateY(0);
     pointer-events: auto;
 }
+.packages-content {
+  max-height: 60px;  /* Altura inicial pequeña */
+}
+
+.packages:hover .packages-content {
+  max-height: 100%;  /* Se expande suavemente */
+}
+
+.packages:hover button {
+  opacity: 1;        /* Hace visible el botón al hacer hover */
+}
+
 /* media queries */
 /* Mobile */
 @media (max-width: 768px) {
@@ -956,4 +984,8 @@ scrollbar-width: none;     /* Firefox */
         bottom: 0;
         right:  calc(50% - 100px);
     }
+}
+
+#color{
+    background-color: '#ff0000';
 }

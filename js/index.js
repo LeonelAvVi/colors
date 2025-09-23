@@ -107,9 +107,9 @@ const services = [
             description: "Description for Service 1",
             bg: "images/bg-banner-school.webp",
             image: [
-                "images/banner-school.webp",
-                "images/banner-school2.webp",
-                "images/banner-school3.webp"
+                "images/newprograms.webp",
+                "images/gallery/school/gallery-school3.webp",
+                "images/gallery/school/gallery-school6.webp",
             ]
         },
         {
@@ -123,7 +123,7 @@ const services = [
             ]
         },
         {
-            name: "Agency Colors",
+            name: "Colors Travel Agency",
             description: "Description for Service 3",
             bg: "images/bg-banner-agency.webp",
             image: [
@@ -151,7 +151,7 @@ function autoChangeService() {
     intervalId = setInterval(() => {
         bannerIndex = (bannerIndex + 1) % services.length;
         changeService(bannerIndex);
-    }, 3000); // Cambia cada 3 segundos
+    }, 5000); // Cambia cada 3 segundos
 }
 
 const bannerMain = document.getElementById("banner-main");
@@ -545,4 +545,24 @@ btnButtonFormSend.addEventListener("click", () => {
     console.log(whatsappUrl);
     
     window.open(whatsappUrl, '_blank');
+});
+
+document.addEventListener('click', (e) => {
+  const target = e.target.dataset.modalTarget;
+  if (target) {
+    const modal = document.getElementById(target);
+    modal.classList.remove('modal');
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    
+  }
+  console.log(e.target);
+  
+  if (e.target.dataset.modalClose !== undefined) {
+    console.log('cerrando modal',e.target.dataset.modalClose);
+    e.target.closest(`${e.target.dataset.modalClose}`)
+    document.getElementById(e.target.dataset.modalClose).classList.add('modal');
+    document.getElementById(e.target.dataset.modalClose).classList.remove('show');
+    document.body.style.overflow = 'auto';
+  }
 });

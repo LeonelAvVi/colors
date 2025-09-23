@@ -71,7 +71,9 @@
                 <p id="description-text-school" class="text-2xl lg:text-xl md:text-4xl text-center" data-aos="fade-up" data-aos-duration="1000">
                     More than just a place to sleep. Colors House is an authentic space where rest, culture, and adventure meet in harmony in the heart of Sucre, Bolivia.
                 </p>
-                <button id="contact-button-school" class="mt-12 bg-primary text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition duration-300" data-aos="fade-up" data-aos-duration="1000">
+                <button 
+                    onclick="window.open('https://api.whatsapp.com/send/?phone=+59175451699&text=Hello%2C+I+would+like+to+get+more+information+about+the+hostel.', '_blank')"
+                    id="contact-button-school" class="mt-12 bg-primary text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition duration-300" data-aos="fade-up" data-aos-duration="1000">
                     Contact us for more information
                 </button>
                 
@@ -87,34 +89,33 @@
                 </p>
                  <div class="grid grid-cols-3 w-full justip-1 gap-4 featured-rooms">
                   
-                    <div id="card-hostal" class="bg-white flex border-primary border-2 rounded-md shadow-lg " data-aos="fade-up">
-                        <img src="images/hostal/card1.webp" alt="Matrimonial Room" class="w-1/2 min-h-60 object-cover rounded-l-md"  onclick="showModalHostal(1)" >
+                    <div id="card-hostal" class="bg-white flex  flex-row border-primary border-2 rounded-md shadow-lg max-w-120" data-aos="fade-up">
+                        <img src="images/hostal/card4.webp" alt="Suite Room" class="w-1/2 min-h-60 object-cover rounded-l-md" onclick="showModalHostal(4)" >
                         <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
-                            <!-- <p class="text-3xl">👨‍👩‍👧‍👦</p> -->
-                            <span class="text-lg font-semibold text-left">Family Suite</span>
+                            <!-- <p class="text-3xl">🛁</p> -->
+                            <span class="text-lg font-semibold text-left">Queen Room</span>
                             <ul class="text-sm text-gray-800 text-left list-disc pl-4">
-                                <li>1 Queen bed + 2 single beds</li>
-                                <li>2 - 4 people</li>
-                                <li>Private bathroom (outside the suite)</li>
-                                <li><strong>245 Bs/night matrimonial</strong></li>
-                                <li><strong>350 Bs/night familiar</strong></li>
+                                <li>1 Queen bed</li>
+                                <li>Private bathroom (outside the room)</li>
+                                <!-- <li><strong>190 Bs/night</strong></li> -->
                             </ul>
                         </div>
                     </div>
-                    <div id="card-hostal" class="bg-white flex border-primary border-2 rounded-md shadow-lg" data-aos="fade-up">
-                        <img src="images/hostal/card2.webp" alt="Double Room" class="w-1/2 min-h-60 object-cover rounded-l-md" onclick="showModalHostal(2)" >
+
+                
+                    <div id="card-hostal" class="bg-white flex flex-row border-primary border-2 rounded-md shadow-lg" data-aos="fade-up">
+                        <img src="images/hostal/card5.webp" alt="Family Room" class="w-1/2 min-h-60 object-cover rounded-l-md" onclick="showModalHostal(5)" >
                         <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
-                            <!-- <p class="text-3xl">🛌 -->
-                            <span class="text-lg font-semibold text-left">Family Room</span>
+                            <!-- <p class="text-3xl">🧸</p> -->
+                            <span class="text-lg font-semibold text-left">Twin Room</span>
                             <ul class="text-sm text-gray-800 text-left list-disc pl-4">
-                                <li>2 - 4 people</li>
-                                <li>1 Queen bed + 1 Bunk Bed (2 Single Beds)</li>
-                                <li>Shared Bathroom</li>
-                                <li><strong>175 Bs/night matrimonial</strong></li>
-                                <li><strong>300 Bs/night familiar</strong></li>
+                                <li>2 Single beds</li>
+                                <li>Shared bathroom</li>
+                                <!-- <li><strong>165 Bs/night</strong></li> -->
                             </ul>
                         </div>
                     </div>
+                    
                     <div id="card-hostal" class="bg-white flex border-primary border-2 rounded-md shadow-lg" data-aos="fade-up">
                         <img src="images/hostal/card3.webp" alt="Matrimonial Shared" class="w-1/2 min-h-60 object-cover rounded-l-md" onclick="showModalHostal(3)" >
                         <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
@@ -123,48 +124,37 @@
                             <ul class="text-sm text-gray-800 text-left list-disc pl-4">
                                 <li>1 Queen bed</li>
                                 <li>Private bathroom (outside the room)</li>
-                                <li><strong>190 Bs/night</strong></li>
+                                <!-- <li><strong>190 Bs/night</strong></li> -->
                             </ul>
                         </div>
                     </div>
-                    <div id="card-hostal" class="bg-white flex  flex-row-reverse border-primary border-2 rounded-md shadow-lg" data-aos="fade-up">
-                        <img src="images/hostal/card4.webp" alt="Suite Room" class="w-1/2 min-h-60 object-cover rounded-r-md" onclick="showModalHostal(4)" >
-                        <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
-                            <!-- <p class="text-3xl">🛁</p> -->
-                            <span class="text-lg font-semibold text-left">Queen Room</span>
-                            <ul class="text-sm text-gray-800 text-left list-disc pl-4">
-                                <li>1 Queen bed</li>
-                                <li>Private bathroom (outside the room)</li>
-                                <li><strong>190 Bs/night</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                
-                    <div id="card-hostal" class="bg-white flex flex-row-reverse border-primary border-2 rounded-md shadow-lg" data-aos="fade-up">
-                        <img src="images/hostal/card5.webp" alt="Family Room" class="w-1/2 min-h-60 object-cover rounded-l-md" onclick="showModalHostal(5)" >
-                        <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
-                            <!-- <p class="text-3xl">🧸</p> -->
-                            <span class="text-lg font-semibold text-left">Twin Room</span>
-                            <ul class="text-sm text-gray-800 text-left list-disc pl-4">
-                                <li>2 Single beds</li>
-                                <li>Shared bathroom</li>
-                                <li><strong>165 Bs/night</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Family Suite -->
-                    <div id="card-hostal" class="bg-white flex flex-row-reverse border-primary border-2 rounded-md shadow-lg" data-aos="fade-up">
-                        <img src="images/hostal/card6.webp" alt="Family Suite" class="w-1/2 min-h-60 object-cover rounded-r-md" onclick="showModalHostal(6)" >
+                </div>
+                <div class="grid grid-cols-2 w-full justify-center gap-4 featured-rooms mt-8">
+                    <div id="card-hostal" class="bg-white flex flex-row-reverse border-primary border-2 rounded-md shadow-lg " data-aos="fade-up" style="height: 260px;" >
+                        <img src="images/hostal/card1.webp" alt="Matrimonial Room" class="w-1/2 object-cover rounded-r-md"  onclick="showModalHostal(1)" >
                         <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
                             <!-- <p class="text-3xl">👨‍👩‍👧‍👦</p> -->
                             <span class="text-lg font-semibold text-left">Family Suite</span>
                             <ul class="text-sm text-gray-800 text-left list-disc pl-4">
-                                <li>4 - 6 people</li>
-                                <li>Multiple beds</li>
-                                <li>Shared bathroom</li>
-                                <li><strong>75 Bs/night</strong></li>
+                                <li>1 Queen bed + 2 single beds</li>
+                                <li>2 - 4 people</li>
+                                <li>Private bathroom (outside the suite)</li>
+                                <!-- <li><strong>245 Bs/night matrimonial</strong></li>
+                                <li><strong>350 Bs/night familiar</strong></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="card-hostal" class="bg-white flex flex-row-reverse border-primary border-2 rounded-md shadow-lg" data-aos="fade-up" style="height: 260px;" >
+                        <img src="images/hostal/card2.webp" alt="Double Room" class="w-1/2 object-cover rounded-r-md" onclick="showModalHostal(2)" >
+                        <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
+                            <!-- <p class="text-3xl">🛌 -->
+                            <span class="text-lg font-semibold text-left">Family Room</span>
+                            <ul class="text-sm text-gray-800 text-left list-disc pl-4">
+                                <li>2 - 4 people</li>
+                                <li>1 Queen bed + 1 Bunk Bed (2 Single Beds)</li>
+                                <li>Shared Bathroom</li>
+                                <!-- <li><strong>175 Bs/night matrimonial</strong></li>
+                                <li><strong>300 Bs/night familiar</strong></li> -->
                             </ul>
                         </div>
                     </div>
@@ -172,18 +162,18 @@
             </div>
         </section>
 
-        <section id="" class="section-agency w-full py-24 px-6" style="background-image: url('images/bg-banner-hostal.webp');">
+        <section id="" class="section-agency w-full py-24 px-6" style="background-image: url('images/hostal/roomshard3.webp'); background-position: center;">
             <div class="flex flex-col items-center justify-center max-w-7xl mx-auto overflow-hidden" data-aos="zoom-in">
                 <div class="flex flex-row justify-center items-center py-8 shared-dorm">
-                    <img src="images/hostal/room7.webp" alt="Logo Escuela" class="h-40 w-auto object-cover min-w-64 max-w-120 -mr-16 border-white border-4 rounded-md" data-aos="fade-right" />
-                    <img src="images/hostal/room3.webp" alt="Logo Escuela" class="h-40 w-auto object-cover min-w-64 max-w-120 -mt-16 z-10 border-primary border-4 rounded-md" data-aos="fade-up" />
-                    <img src="images/hostal/room6.webp" alt="Logo Escuela" class="h-40 w-auto object-cover min-w-64 max-w-120 -ml-16 border-white border-4 rounded-md" data-aos="fade-left" />
+                    <img src="images/hostal/roomshard1.webp" alt="Logo Escuela" class="h-40 w-auto object-cover min-w-64 max-w-120 -mr-16 border-white border-4 rounded-md" data-aos="fade-right" />
+                    <img src="images/hostal/roomshard10.webp" alt="Logo Escuela" class="h-40 w-auto object-cover min-w-64 max-w-120 -mt-16 z-10 border-primary border-4 rounded-md" data-aos="fade-up" />
+                    <img src="images/hostal/roomshard7.webp" alt="Logo Escuela" class="h-40 w-auto object-cover min-w-64 max-w-120 -ml-16 border-white border-4 rounded-md" data-aos="fade-left" />
                 </div>
                 <span class="justify-center flex text-2xl text-color-primary  lg:text-4xl font-bold"> 👥 Shared Dorm Room </span>
                 <p class="text-xl lg:text-xl md:text-xl my-8 mb-8 text-center text-white" data-aos="fade-up" data-aos-duration="1000">
                     Share a dormitory with up to 6 people, ideal for travelers looking for a social and economical experience.
                     <br>
-                    <strong>75 Bs/person/night</strong>             
+                    <!-- <strong>75 Bs/person/night</strong>              -->
                 </p>
                 
                 
@@ -199,7 +189,7 @@
                     </h2>
                 </span>
 
-                <div id="items-perks" class=" mx-auto text-center py-16 my-12 gap-4 flex flex-wrap justify-center">
+                <div id="items-perks" class=" mx-auto text-center py-16 my-12 gap-4 flex flex-wrap justify-center z-0">
                     <div class="group relative overflow-hidden bg-white border-secondary rounded-xl shadow flex flex-col items-center p-4 max-w-64 min-w-64 transition-all duration-300" data-aos="fade-up" style="border-width: 1px;">
                         <p class="text-5xl z-10">🛜</p>
                         <h3 class="text-lg font-semibold my-2 text-black text-center z-10">Free Wi-Fi</h3>
@@ -230,6 +220,55 @@
                         <h3 class="text-lg font-semibold my-2 text-black text-center">Easy Access to attractions</h3>
                     </div>
                 </div> 
+            </div>
+        </section>
+
+        <section id="" class="section-agency w-full py-24 px-6 mb-24" style="background-image: url('images/hostal/roomshard5.webp'); background-position: center; background-color: #242424;">
+            <span class="justify-center flex text-2xl  lg:text-4xl font-bold my-8 text-white ">STAY <span class="text-color-primary ml-2">PACKAGES</span> </span>
+            <div class="flex flex-row items-center justify-center max-w-7xl mx-auto overflow-hidden gap-16" data-aos="zoom-in">
+                <div class="col-start-4 relative rounded-xl overflow-hidden border-4 border-yellow-400 h-80 packages" data-aos="zoom-in">
+                    <img src="images/stayFamily.webp" alt="Dance" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 w-full text-white text-center overflow-hidden transition-all duration-700 ease-in-out bg-black/70 packages-content">
+                        <div class="flex flex-col items-center justify-end p-4 h-full">
+                        <p class="text-lg font-semibold">Host Family</p>
+                        <button 
+                            data-modal-target="hostFamily"
+                            class="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-full opacity-0 transition-opacity duration-700 ease-in-out">
+                            View more
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-start-4 relative rounded-xl overflow-hidden border-4 border-yellow-400 h-80 packages" data-aos="zoom-in">
+                    <img src="images/stayPersonal.webp" alt="Dance" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 w-full text-white text-center overflow-hidden transition-all duration-700 ease-in-out bg-black/70 packages-content">
+                        <div class="flex flex-col items-center justify-end p-4 h-full">
+                        <p class="text-lg font-semibold">Host Personal</p>
+                        <button 
+                            data-modal-target="hostPersonal"
+                            class="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-full opacity-0 transition-opacity duration-700 ease-in-out">
+                            View more
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-start-4 relative rounded-xl overflow-hidden border-4 border-yellow-400 h-80 packages" data-aos="zoom-in">
+                    <img src="images/shareRoom.webp" alt="Dance" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 w-full text-white text-center overflow-hidden transition-all duration-700 ease-in-out bg-black/70 packages-content">
+                        <div class="flex flex-col items-center justify-end p-4 h-full">
+                        <p class="text-lg font-semibold">Share Room</p>
+                        <button 
+                            data-modal-target="shareRoom"
+                            class="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-full opacity-0 transition-opacity duration-700 ease-in-out">
+                            View more
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -366,8 +405,444 @@
                 </div>
             </div>
         </div>
+
+        <div id="hostFamily" class="fixed inset-0 w-full px-16 modal lg:px-16 md:px-2 z-100" style="background-color: #313131d7;">
+            <div class="flex items-center justify-center h-full w-full z-100">
+                <div class="relative bg-white rounded-sm mx-auto w-7xl border border-secondary overflow-y-auto mt-8 max-h-[75vh] scrollbar-thin scrollbar-thumb-secondary scrollbar-track-gray-100 p-8 z-100">
+                    
+                    <h2 class="text-3xl font-bold text-center text-yellow-600 mb-6">
+                        Homestay (Host Family)
+                    </h2>
+
+                    <!-- Descripción -->
+                    <p class="text-gray-700 text-lg leading-relaxed mb-8 text-center">
+                        The student will have a private room within the host family’s home. Two meals per day are included: 
+                        <span class="font-semibold">breakfast</span> and <span class="font-semibold">lunch</span>. 
+                        Dinner is left open so that the student can either prepare something at home or enjoy dining out in the city.  
+                        The homestay experience offers an authentic cultural immersion, where the student can share daily life, customs, 
+                        and local traditions with the family. In addition, it provides the opportunity to practice Spanish at all times 
+                        in a warm and welcoming environment.
+                    </p>
+
+                    <!-- Tablas -->
+                    <div class="space-y-10">
+                        <!-- 1 Semana -->
+                        <div>
+                        <h3 class="text-2xl font-semibold text-yellow-500 mb-4 text-center">1 Week (5 days of classes / 7 nights homestay)</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                            <thead class="bg-yellow-100 text-gray-800">
+                                <tr>
+                                <th class="px-4 py-2 border">Package</th>
+                                <th class="px-4 py-2 border">Classes (h)</th>
+                                <th class="px-4 py-2 border">Classes (USD)</th>
+                                <th class="px-4 py-2 border">Homestay (USD)</th>
+                                <th class="px-4 py-2 border">Total (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Open Program</td>
+                                <td class="px-4 py-2 border">10 h (2 h/day)</td>
+                                <td class="px-4 py-2 border">70</td>
+                                <td class="px-4 py-2 border">175</td>
+                                <td class="px-4 py-2 border font-bold">245</td>
+                                </tr>
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Regular Program</td>
+                                <td class="px-4 py-2 border">20 h (4 h/day)</td>
+                                <td class="px-4 py-2 border">140</td>
+                                <td class="px-4 py-2 border">175</td>
+                                <td class="px-4 py-2 border font-bold">350</td>
+                                </tr>
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Intensive Program</td>
+                                <td class="px-4 py-2 border">30 h (6 h/day)</td>
+                                <td class="px-4 py-2 border">210</td>
+                                <td class="px-4 py-2 border">175</td>
+                                <td class="px-4 py-2 border font-bold">385</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+                        <!-- 2 Semanas -->
+                        <div>
+                        <h3 class="text-2xl font-semibold text-yellow-500 mb-4 text-center">2 Weeks (10 days of classes / 14 nights homestay)</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                            <thead class="bg-yellow-100 text-gray-800">
+                                <tr>
+                                <th class="px-4 py-2 border">Package</th>
+                                <th class="px-4 py-2 border">Classes (h)</th>
+                                <th class="px-4 py-2 border">Classes (USD)</th>
+                                <th class="px-4 py-2 border">Homestay (USD)</th>
+                                <th class="px-4 py-2 border">Total (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Open Program</td>
+                                <td class="px-4 py-2 border">20 h (10 h/week)</td>
+                                <td class="px-4 py-2 border">140</td>
+                                <td class="px-4 py-2 border">350</td>
+                                <td class="px-4 py-2 border font-bold">490</td>
+                                </tr>
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Regular Program</td>
+                                <td class="px-4 py-2 border">40 h (20 h/week)</td>
+                                <td class="px-4 py-2 border">280</td>
+                                <td class="px-4 py-2 border">350</td>
+                                <td class="px-4 py-2 border font-bold">630</td>
+                                </tr>
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Intensive Program</td>
+                                <td class="px-4 py-2 border">60 h (30 h/week)</td>
+                                <td class="px-4 py-2 border">420</td>
+                                <td class="px-4 py-2 border">350</td>
+                                <td class="px-4 py-2 border font-bold">770</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+                        <!-- 1 Mes -->
+                        <div>
+                        <h3 class="text-2xl font-semibold text-yellow-500 mb-4 text-center">1 Month (20 days of classes / 28 nights homestay)</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                            <thead class="bg-yellow-100 text-gray-800">
+                                <tr>
+                                <th class="px-4 py-2 border">Package</th>
+                                <th class="px-4 py-2 border">Classes (h)</th>
+                                <th class="px-4 py-2 border">Classes (USD)</th>
+                                <th class="px-4 py-2 border">Homestay (USD)</th>
+                                <th class="px-4 py-2 border">Total (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Open Program</td>
+                                <td class="px-4 py-2 border">40 h (10 h/week)</td>
+                                <td class="px-4 py-2 border">240</td>
+                                <td class="px-4 py-2 border">700</td>
+                                <td class="px-4 py-2 border font-bold">940</td>
+                                </tr>
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Regular Program</td>
+                                <td class="px-4 py-2 border">80 h (20 h/week)</td>
+                                <td class="px-4 py-2 border">480</td>
+                                <td class="px-4 py-2 border">700</td>
+                                <td class="px-4 py-2 border font-bold">1180</td>
+                                </tr>
+                                <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-4 py-2 border font-medium">Intensive Program</td>
+                                <td class="px-4 py-2 border">120 h (30 h/week)</td>
+                                <td class="px-4 py-2 border">720</td>
+                                <td class="px-4 py-2 border">700</td>
+                                <td class="px-4 py-2 border font-bold">1420</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+
+                    <button class="bg-red-500  text-2xl text-white p-2 rounded mb-12 fixed top-20 right-20 btn-close"  data-modal-close >
+                        <span  data-modal-close="hostFamily"  class="material-symbols-outlined flex items-center justify-center" style="font-size: 2rem;">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="hostPersonal" class="fixed inset-0 w-full px-16 modal lg:px-16 md:px-2 z-100" style="background-color: #313131d7;">
+            <div class="flex items-center justify-center h-full w-full z-100">
+                <div class="relative bg-white rounded-sm mx-auto w-7xl border border-secondary overflow-y-auto mt-8 max-h-[75vh] scrollbar-thin scrollbar-thumb-secondary scrollbar-track-gray-100 p-8">
+                    
+                     <!-- Título -->
+                    <h2 class="text-3xl font-bold text-center text-blue-600 mb-6">Hostel</h2>
+
+                    <!-- Descripción -->
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6 text-center">
+                        Another option is to stay in our hostel, ideal for those who prefer a youthful, dynamic environment 
+                        with greater independence. You can choose between:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-lg mb-6">
+                        <li><span class="font-semibold">Private Room:</span> Designed for students seeking more privacy, comfort, and tranquility.</li>
+                        <li><span class="font-semibold">Shared Room:</span> A more affordable and social option, perfect for meeting travelers from different countries.</li>
+                    </ul>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-10 text-center">
+                        The hostel includes common areas, a shared kitchen, internet, and social spaces, making it easy to 
+                        interact with other travelers while enjoying life in the city.
+                    </p>
+
+                    <!-- Private Room Tables -->
+                    <h3 class="text-2xl font-semibold text-blue-500 mb-4 text-center">Private Room</h3>
+
+                    <!-- 1 Week -->
+                    <div class="overflow-x-auto mb-10">
+                        <h4 class="text-xl font-semibold text-blue-400 mb-2 text-center">1 Week (5 days of classes / 7 nights of accommodation)</h4>
+                        <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                        <thead class="bg-blue-100 text-gray-800">
+                            <tr>
+                            <th class="px-4 py-2 border">Package</th>
+                            <th class="px-4 py-2 border">Classes (h)</th>
+                            <th class="px-4 py-2 border">Classes (USD)</th>
+                            <th class="px-4 py-2 border">Accommodation (USD)</th>
+                            <th class="px-4 py-2 border">Total (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Open Program</td>
+                            <td class="border px-4 py-2">10 h (2 h/day)</td>
+                            <td class="border px-4 py-2">70</td>
+                            <td class="border px-4 py-2">161</td>
+                            <td class="border px-4 py-2 font-bold">231</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Regular Program</td>
+                            <td class="border px-4 py-2">20 h (4 h/day)</td>
+                            <td class="border px-4 py-2">140</td>
+                            <td class="border px-4 py-2">161</td>
+                            <td class="border px-4 py-2 font-bold">301</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Intensive Program</td>
+                            <td class="border px-4 py-2">30 h (6 h/day)</td>
+                            <td class="border px-4 py-2">210</td>
+                            <td class="border px-4 py-2">161</td>
+                            <td class="border px-4 py-2 font-bold">371</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 2 Weeks -->
+                    <div class="overflow-x-auto mb-10">
+                        <h4 class="text-xl font-semibold text-blue-400 mb-2 text-center">2 Weeks (10 days of classes / 14 nights of accommodation)</h4>
+                        <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                        <thead class="bg-blue-100 text-gray-800">
+                            <tr>
+                            <th class="px-4 py-2 border">Package</th>
+                            <th class="px-4 py-2 border">Classes (h)</th>
+                            <th class="px-4 py-2 border">Classes (USD)</th>
+                            <th class="px-4 py-2 border">Accommodation (USD)</th>
+                            <th class="px-4 py-2 border">Total (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Open Program</td>
+                            <td class="border px-4 py-2">20 h (10 h/week)</td>
+                            <td class="border px-4 py-2">140</td>
+                            <td class="border px-4 py-2">322</td>
+                            <td class="border px-4 py-2 font-bold">462</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Regular Program</td>
+                            <td class="border px-4 py-2">40 h (20 h/week)</td>
+                            <td class="border px-4 py-2">280</td>
+                            <td class="border px-4 py-2">322</td>
+                            <td class="border px-4 py-2 font-bold">602</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Intensive Program</td>
+                            <td class="border px-4 py-2">60 h (30 h/week)</td>
+                            <td class="border px-4 py-2">420</td>
+                            <td class="border px-4 py-2">322</td>
+                            <td class="border px-4 py-2 font-bold">742</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 1 Month -->
+                    <div class="overflow-x-auto">
+                        <h4 class="text-xl font-semibold text-blue-400 mb-2 text-center">1 Month (20 days of classes / 28 nights of accommodation)</h4>
+                        <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                        <thead class="bg-blue-100 text-gray-800">
+                            <tr>
+                            <th class="px-4 py-2 border">Package</th>
+                            <th class="px-4 py-2 border">Classes (h)</th>
+                            <th class="px-4 py-2 border">Classes (USD)</th>
+                            <th class="px-4 py-2 border">Accommodation (USD)</th>
+                            <th class="px-4 py-2 border">Total (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Open Program</td>
+                            <td class="border px-4 py-2">40 h (10 h/week)</td>
+                            <td class="border px-4 py-2">240</td>
+                            <td class="border px-4 py-2">560</td>
+                            <td class="border px-4 py-2 font-bold">800</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Regular Program</td>
+                            <td class="border px-4 py-2">80 h (20 h/week)</td>
+                            <td class="border px-4 py-2">480</td>
+                            <td class="border px-4 py-2">560</td>
+                            <td class="border px-4 py-2 font-bold">1040</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition">
+                            <td class="border px-4 py-2 font-medium">Intensive Program</td>
+                            <td class="border px-4 py-2">120 h (30 h/week)</td>
+                            <td class="border px-4 py-2">720</td>
+                            <td class="border px-4 py-2">560</td>
+                            <td class="border px-4 py-2 font-bold">1280</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <button class="bg-red-500  text-2xl text-white p-2 rounded mb-12 fixed top-20 right-20 btn-close"  data-modal-close >
+                        <span  data-modal-close="hostPersonal"  class="material-symbols-outlined flex items-center justify-center" style="font-size: 2rem;">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="shareRoom" class="fixed inset-0 w-full px-16 modal lg:px-16 md:px-2 z-100" style="background-color: #313131d7;">
+            <div class="flex items-center justify-center h-full w-full z-100">
+                <div class="relative bg-white rounded-sm mx-auto w-7xl border border-secondary overflow-y-auto mt-8 max-h-[75vh] scrollbar-thin scrollbar-thumb-secondary scrollbar-track-gray-100 p-8">
+                      <!-- Título -->
+                    <h2 class="text-3xl font-bold text-center text-green-600 mb-6">Shared Room</h2>
+
+                    <!-- 1 Week -->
+                    <div class="overflow-x-auto mb-10">
+                        <h3 class="text-xl font-semibold text-green-500 mb-2 text-center">1 Week (5 days of classes / 7 nights of accommodation)</h3>
+                        <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                        <thead class="bg-green-100 text-gray-800">
+                            <tr>
+                            <th class="px-4 py-2 border">Package</th>
+                            <th class="px-4 py-2 border">Classes (h)</th>
+                            <th class="px-4 py-2 border">Classes (USD)</th>
+                            <th class="px-4 py-2 border">Accommodation (USD)</th>
+                            <th class="px-4 py-2 border">Total (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Open Program</td>
+                            <td class="border px-4 py-2">10 h (2 h/day)</td>
+                            <td class="border px-4 py-2">70</td>
+                            <td class="border px-4 py-2">70</td>
+                            <td class="border px-4 py-2 font-bold">140</td>
+                            </tr>
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Regular Program</td>
+                            <td class="border px-4 py-2">20 h (4 h/day)</td>
+                            <td class="border px-4 py-2">140</td>
+                            <td class="border px-4 py-2">70</td>
+                            <td class="border px-4 py-2 font-bold">210</td>
+                            </tr>
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Intensive Program</td>
+                            <td class="border px-4 py-2">30 h (6 h/day)</td>
+                            <td class="border px-4 py-2">210</td>
+                            <td class="border px-4 py-2">70</td>
+                            <td class="border px-4 py-2 font-bold">280</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 2 Weeks -->
+                    <div class="overflow-x-auto mb-10">
+                        <h3 class="text-xl font-semibold text-green-500 mb-2 text-center">2 Weeks (10 days of classes / 14 nights of accommodation)</h3>
+                        <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                        <thead class="bg-green-100 text-gray-800">
+                            <tr>
+                            <th class="px-4 py-2 border">Package</th>
+                            <th class="px-4 py-2 border">Classes (h)</th>
+                            <th class="px-4 py-2 border">Classes (USD)</th>
+                            <th class="px-4 py-2 border">Accommodation (USD)</th>
+                            <th class="px-4 py-2 border">Total (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Open Program</td>
+                            <td class="border px-4 py-2">20 h (10 h/week)</td>
+                            <td class="border px-4 py-2">140</td>
+                            <td class="border px-4 py-2">140</td>
+                            <td class="border px-4 py-2 font-bold">280</td>
+                            </tr>
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Regular Program</td>
+                            <td class="border px-4 py-2">40 h (20 h/week)</td>
+                            <td class="border px-4 py-2">280</td>
+                            <td class="border px-4 py-2">140</td>
+                            <td class="border px-4 py-2 font-bold">420</td>
+                            </tr>
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Intensive Program</td>
+                            <td class="border px-4 py-2">60 h (30 h/week)</td>
+                            <td class="border px-4 py-2">420</td>
+                            <td class="border px-4 py-2">140</td>
+                            <td class="border px-4 py-2 font-bold">560</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 1 Month -->
+                    <div class="overflow-x-auto">
+                        <h3 class="text-xl font-semibold text-green-500 mb-2 text-center">1 Month (20 days of classes / 28 nights of accommodation)</h3>
+                        <table class="min-w-full table-auto border border-gray-300 text-center rounded-lg overflow-hidden shadow">
+                        <thead class="bg-green-100 text-gray-800">
+                            <tr>
+                            <th class="px-4 py-2 border">Package</th>
+                            <th class="px-4 py-2 border">Classes (h)</th>
+                            <th class="px-4 py-2 border">Classes (USD)</th>
+                            <th class="px-4 py-2 border">Accommodation (USD)</th>
+                            <th class="px-4 py-2 border">Total (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Open Program</td>
+                            <td class="border px-4 py-2">40 h (10 h/week)</td>
+                            <td class="border px-4 py-2">240</td>
+                            <td class="border px-4 py-2">224</td>
+                            <td class="border px-4 py-2 font-bold">520</td>
+                            </tr>
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Regular Program</td>
+                            <td class="border px-4 py-2">80 h (20 h/week)</td>
+                            <td class="border px-4 py-2">480</td>
+                            <td class="border px-4 py-2">224</td>
+                            <td class="border px-4 py-2 font-bold">704</td>
+                            </tr>
+                            <tr class="hover:bg-green-50 transition">
+                            <td class="border px-4 py-2 font-medium">Intensive Program</td>
+                            <td class="border px-4 py-2">120 h (30 h/week)</td>
+                            <td class="border px-4 py-2">720</td>
+                            <td class="border px-4 py-2">224</td>
+                            <td class="border px-4 py-2 font-bold">1280</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <button class="bg-red-500  text-2xl text-white p-2 rounded mb-12 fixed top-20 right-20 btn-close"  data-modal-close >
+                        <span  data-modal-close="shareRoom"  class="material-symbols-outlined flex items-center justify-center" style="font-size: 2rem;">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <!-- boton flotante de chat de color amarillo -->
-        <span onclick="window.open('https://wa.me/59172412345', '_blank')"  class="fixed bottom-8 right-8 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300 cursor-pointer" id="chat-button">
+        <span onclick="window.open('https://wa.me/59175451699', '_blank')"  class="fixed bottom-8 right-8 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300 cursor-pointer" id="chat-button">
             <span class="absolute -inset-1 rounded-full animate-ping bg-yellow-400 opacity-75"></span>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat text-white" viewBox="0 0 16 16">
@@ -376,11 +851,11 @@
             </svg>
         </span>
 
-        <div onclick="window.open('https://wa.me/59172412345', '_blank')" id="chat-hint" class="fixed bottom-24 right-6 bg-yellow-100 border border-yellow-500 text-black text-sm px-3 py-2 rounded-full shadow-lg opacity-0 translate-y-4 transition-all duration-700 ease-out pointer-events-none">
+        <div onclick="window.open('https://wa.me/59175451699', '_blank')" id="chat-hint" class="fixed bottom-24 right-6 bg-yellow-100 border border-yellow-500 text-black text-sm px-3 py-2 rounded-full shadow-lg opacity-0 translate-y-4 transition-all duration-700 ease-out pointer-events-none">
             Need help? 👀
         </div>
         
-        <script src="js/indexv1.js"></script>
+        <script src="js/index.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();
