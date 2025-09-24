@@ -452,47 +452,69 @@ if (window.location.pathname.includes('hostal.html')) {
 }
 // modals hostal
 
-    const FamilyImage = [
-        "images/hostal/card1.webp",
-        "images/hostal/Family1.webp",
-        "images/hostal/Family2.webp",
-        "images/hostal/Family3.webp",
-        "images/hostal/Family4.webp"
-    ]
+const FamilyImage = [
 
-    const familyRoomImages = [
-        "images/hostal/card2.webp",
-        "images/hostal/roomfamily1.webp",
-        "images/hostal/roomfamily2.webp",
-        "images/hostal/roomfamily3.webp",
-        "images/hostal/roomfamily4.webp",
-        "images/hostal/roomfamily5.webp",
-        "images/hostal/roomfamily6.webp",
-        "images/hostal/roomfamily7.webp"
-    ]
+    "images/hostal/cafe1.webp",
+    "images/hostal/cafe2.webp",
+    "images/hostal/cafe3.webp",
+    "images/hostal/card1.webp",
+    "images/hostal/Family1.webp",
+    "images/hostal/Family2.webp",
+    "images/hostal/Family3.webp",
+    "images/hostal/Family4.webp"
+]
 
-    const queenRoomImages = [
-        "images/hostal/card3.webp",
-        "images/hostal/queen1.webp",
-    ]
+const familyRoomImages = [
+    "images/hostal/card2.webp",
+    "images/hostal/roomfamily1.webp",
+    "images/hostal/roomfamily2.webp",
+    "images/hostal/roomfamily3.webp",
+    "images/hostal/roomfamily4.webp",
+    "images/hostal/roomfamily5.webp",
+    "images/hostal/roomfamily6.webp",
+    "images/hostal/roomfamily7.webp"
+]
 
-    const queenRoomTwoImages = [
-        "images/hostal/card4.webp",
-        "images/hostal/queenroom1.webp",
-        "images/hostal/queenroom2.webp",
-        "images/hostal/queenroom3.webp",
-        "images/hostal/queenroom3-1.webp"
-    ]
+const queenRoomImages = [
+    "images/hostal/card3.webp",
+    "images/hostal/naranja1.webp",
+    "images/hostal/naranja2.webp",
+]
 
-    const twinRoomImages = [
-        "images/hostal/card5.webp",
-        "images/hostal/twin1.webp",
-        "images/hostal/twin2.webp",
-    ]
+const queenRoomTwoImages = [
+    // "images/hostal/card4.webp",
+    "images/hostal/queenroom1.webp",
+    "images/hostal/chocolate1.webp",
+    "images/hostal/chocolate2.webp",
+    "images/hostal/chocolate3.webp",
 
-    const suiteFamilyImages = [
-        "images/hostal/card6.webp",
-    ]
+    // "images/hostal/queenroom2.webp",
+    // "images/hostal/queenroom3.webp",
+    // "images/hostal/queenroom3-1.webp"
+]
+
+const twinRoomImages = [
+    "images/hostal/card5.webp",
+    "images/hostal/terracota1.webp",
+    "images/hostal/terracota2.webp",
+
+    // "images/hostal/twin1.webp",
+    // "images/hostal/twin2.webp",
+]
+
+const suiteFamilyImages = [
+    "images/hostal/card6.webp",
+]
+
+const shareImages = [
+    "images/hostal/share1.webp",
+    "images/hostal/share2.webp",
+    "images/hostal/share3.webp",
+    "images/hostal/share4.webp",
+    "images/hostal/share5.webp",
+    "images/hostal/share6.webp",
+    "images/hostal/sahre7.webp",
+]
 
 
 function showModalHostal(index) {
@@ -518,6 +540,9 @@ function showModalHostal(index) {
             break
         case 6:
             imagesData = suiteFamilyImages
+            break
+        case 7:
+            imagesData = shareImages
             break
     }
 

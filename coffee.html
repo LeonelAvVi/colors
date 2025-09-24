@@ -78,6 +78,49 @@
                 
             </div>
         </section>
+
+        <section id="week" class="week-section bg-gray-100 py-32 px-6 bg-fixed" style="background-image: url('images/coffee/bg-coffe2.webp');background-color: #ffffffec;" >
+            <div class="max-w-7xl mx-auto text-center md:w-m-full lg:w-full">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center text-black data-aos="fade-right"><span class="mr-2">🗓️</span><span class="mr-2 text-color-primary">Every day, </span> a adventure is different</h2>
+                <div class="week-items flex flex-col lg:flex-row items-center justify-between gap-10 mt-8">
+                    <div class="w-1/2 flex flex-col items-start" data-aos="fade-up">
+                        <div id="week-monday" style="border: 3px solid #FEC303; border-radius: 4px;" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-active border-primary mt-2" onclick="changeWeek(1)">
+                            <span class="text-gray-800 font-bold text-2xl">Monday: Italian Night</span>
+                            <p class="text-gray-900 text-left">Start the week with flavor: homemade pasta dishes accompanied by wine or Fernet in a warm and delicious evening.</p>
+                        </div>
+                        <div id="week-tuesday" style="border: 3px solid #FEC303; border-radius: 4px;" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive mt-2" onclick="changeWeek(2)">
+                            <span class="text-gray-800 font-bold text-xl">Tuesday: Parlana</span>
+                            <p class="text-gray-900 text-left">A night to practice languages, make new friends, and connect with the world without leaving the hostel. All accents are welcome!</p>
+                        </div>
+                        <div id="week-wednesday" style="border: 3px solid #FEC303; border-radius: 4px;" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive mt-2" onclick="changeWeek(3)">
+                            <span class="text-gray-800 font-bold text-xl">Wednesday: Bolivian Night</span>
+                            <p class="text-gray-900 text-left">Discover the flavors and traditions of Bolivia with typical dishes, local drinks, and good company. Culture in every bite.</p>
+                        </div>
+                        <div id="week-thursday" style="border: 3px solid #FEC303; border-radius: 4px;" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive mt-2" onclick="changeWeek(4)">
+                            <span class="text-gray-800 font-bold text-xl">Thursday: Bachata & Peceras</span>
+                            <p class="text-gray-900 text-left">Learn to move to the rhythm of bachata and enjoy our peceras (large drinks to share). Rhythm and fun guaranteed!</p>
+                        </div>
+                        <div id="week-friday" style="border: 3px solid #FEC303; border-radius: 4px;" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive mt-2" onclick="changeWeek(5)">
+                            <span class="text-gray-800 font-bold text-xl">Friday: Karaoke + Ladies Night</span>
+                            <p class="text-gray-900 text-left">Sing your favorite songs, celebrate Friday, and enjoy special drinks for ladies. A night of laughter, voices, and party!</p>
+                        </div>
+                        <div id="week-saturday" style="border: 3px solid #FEC303; border-radius: 4px;" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive mt-2" onclick="changeWeek(6)">
+                            <span class="text-gray-800 font-bold text-xl">Saturday: Pizza Rodizio</span>
+                            <p class="text-gray-900 text-left">Eat all you want: assorted pizzas served non-stop on a delicious night perfect for sharing with new friends.</p>
+                        </div>
+                        <div id="week-sunday" style="border: 3px solid #FEC303; border-radius: 4px;" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive mt-2" onclick="changeWeek(7)">
+                            <span class="text-gray-800 font-bold text-xl">Sunday: Latin American and Bolivian Cinema</span>
+                            <p class="text-gray-900 text-left">We close the week with cinema and culture. Relax with good movies, popcorn, and a deep look at our identity.</p>
+                        </div>
+                    </div>
+                    <div id="image-week" class="flex flex-col items-center max-w-1/2 image-week" > 
+                        <img id="week-image-1" src="images/week/monday1.webp" alt="week 1" class="rounded-xl shadow-lg w-3/5 mb-4 border-tertiary ml-40 max-h-80 object-cover" style="max-height: 252px; min-width: 320px;" data-aos="fade-left"/>
+                        <img id="week-image-2" src="images/week/monday2.webp" alt="week 2" class="rounded-xl shadow-lg w-3/5 mb-4 border-secondary -mt-24 max-h-80 object-cover" style="max-height: 252px; min-width: 320px;" data-aos="fade-right"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="bg-yellow-50 px-6 ">
             <div class="max-w-7xl mx-auto text-center py-16 my-12">
                 <span class="flex flex-col items-start border-bottom-color-primary border-b-4 mb-8">
@@ -189,47 +232,7 @@
             </div>
         </section>
 
-        <section id="week" class="week-section bg-gray-100 py-32 px-6 bg-fixed" style="background-image: url('images/coffee/bg-coffe2.webp');" >
-            <div class="max-w-7xl mx-auto text-center md:w-m-full lg:w-full">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-3 flex items-center text-color-secondary" data-aos="fade-right"><span class="mr-2">🗓️</span><span class="mr-2 text-color-primary">Every day, a</span>  adventure is different</h2>
-                <div class="week-items flex flex-col lg:flex-row items-center justify-between gap-10 mt-8">
-                    <div class="w-1/2 flex flex-col items-start" data-aos="fade-up">
-                        <div id="week-monday" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-active" onclick="changeWeek(1)">
-                            <span class="text-gray-800 font-bold text-2xl">Monday: Italian Night</span>
-                            <p class="text-gray-900 text-left">Start the week with flavor: homemade pasta dishes accompanied by wine or Fernet in a warm and delicious evening.</p>
-                        </div>
-                        <div id="week-tuesday" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(2)">
-                            <span class="text-gray-800 font-bold text-xl">Tuesday: Parlana</span>
-                            <p class="text-gray-900 text-left">A night to practice languages, make new friends, and connect with the world without leaving the hostel. All accents are welcome!</p>
-                        </div>
-                        <div id="week-wednesday" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer  day-inactive" onclick="changeWeek(3)">
-                            <span class="text-gray-800 font-bold text-xl">Wednesday: Bolivian Night</span>
-                            <p class="text-gray-900 text-left">Discover the flavors and traditions of Bolivia with typical dishes, local drinks, and good company. Culture in every bite.</p>
-                        </div>
-                        <div id="week-thursday" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(4)">
-                            <span class="text-gray-800 font-bold text-xl">Thursday: Bachata & Peceras</span>
-                            <p class="text-gray-900 text-left">Learn to move to the rhythm of bachata and enjoy our peceras (large drinks to share). Rhythm and fun guaranteed!</p>
-                        </div>
-                        <div id="week-friday" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(5)">
-                            <span class="text-gray-800 font-bold text-xl">Friday: Karaoke + Ladies Night</span>
-                            <p class="text-gray-900 text-left">Sing your favorite songs, celebrate Friday, and enjoy special drinks for ladies. A night of laughter, voices, and party!</p>
-                        </div>
-                        <div id="week-saturday" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(6)">
-                            <span class="text-gray-800 font-bold text-xl">Saturday: Pizza Rodizio</span>
-                            <p class="text-gray-900 text-left">Eat all you want: assorted pizzas served non-stop on a delicious night perfect for sharing with new friends.</p>
-                        </div>
-                        <div id="week-sunday" class=" px-4 py-3 flex flex-col justify-start items-start w-full rounded-sm mb-2 cursor-pointer day-inactive" onclick="changeWeek(7)">
-                            <span class="text-gray-800 font-bold text-xl">Sunday: Latin American and Bolivian Cinema</span>
-                            <p class="text-gray-900 text-left">We close the week with cinema and culture. Relax with good movies, popcorn, and a deep look at our identity.</p>
-                        </div>
-                    </div>
-                    <div id="image-week" class="flex flex-col items-center max-w-1/2 image-week" > 
-                        <img id="week-image-1" src="images/week/monday1.webp" alt="week 1" class="rounded-xl shadow-lg w-3/5 mb-4 border-tertiary ml-40 max-h-80 object-cover" style="max-height: 252px; min-width: 320px;" data-aos="fade-left"/>
-                        <img id="week-image-2" src="images/week/monday2.webp" alt="week 2" class="rounded-xl shadow-lg w-3/5 mb-4 border-secondary -mt-24 max-h-80 object-cover" style="max-height: 252px; min-width: 320px;" data-aos="fade-right"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <section>
             <div class="max-w-7xl mx-auto text-center pt-16 mt-12 px-6">
