@@ -257,7 +257,7 @@ scrollbar-width: none;     /* Firefox */
 }
 
 .bg-gallery{
-    background-image: url(../images/bg-gallery.webp);
+    background-image: url(../images/hostal/hostalbanner3.webp);
     background-size: cover;
     background-blend-mode: overlay;
     background-color: #1e1e1ecb;

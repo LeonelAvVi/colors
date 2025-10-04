@@ -52,8 +52,8 @@
 
                 <!-- Menú navegación -->
                 <nav id="menu" class="flex-col space-y-4 md:space-y-0 md:space-x- top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-center md:text-left px-4 py-4 md:py-0">
-                    <a href="index.html" class="text-white hover:underline hover:transform-scale-105 transition duration-300">Home</a>
-                    <a href="school.html" class="text-white hover:underline hover:transform ">School</a>
+                    <a href="home.html" class="text-white hover:underline hover:transform-scale-105 transition duration-300">Home</a>
+                    <a href="index.html" class="text-white hover:underline hover:transform ">School</a>
                     <a href="" class="text-color-primary hover:underline hover:transform ">Hostel</a>
                     <a href="adventure.html" class="text-white hover:underline hover:transform ">Agency</a>
                     <a href="coffee.html" class="text-white hover:underline hover:transform ">Coffee</a>
@@ -62,18 +62,18 @@
             </div>
         </header>
         <section class="relative bg-gray-900 text-white py-32 px-6 flex flex-col items-center justify-center lg:px-20 banner-main pt-40"
-        style="background-image: url('images/bg-banner-hostal.webp'); background-size: cover;  border-bottom-color: #FEC303; border-bottom-width: 8px; background-position: bottom;">
+        style="background-image: url('images/hostal/hostalbanner3.webp'); background-size: cover;  border-bottom-color: #FEC303; border-bottom-width: 8px; background-position: top;">
             <div class="content-banner-school max-w-7xl mx-auto flex flex-col lg:flex-col items-center justify-center  lg:max-w-4xl md:max-w-full z-100">
                 <p class="text-5xl lg:text-6xl md:text-6xl font-bold mb-4 text-center" data-aos="fade-up" data-aos-duration="1000">🛏</p>
                 <p id="description-text-school" class="text-2xl lg:text-2xl md:text-4xl text-center font-bold mb-2 mt-4" data-aos="fade-up" data-aos-duration="1000">
-                    Welcome to Colors House Hostal
+                    Welcome to Color’s House Hostal
                 </p>
                 <p id="description-text-school" class="text-2xl lg:text-xl md:text-4xl text-center" data-aos="fade-up" data-aos-duration="1000">
                     More than just a place to sleep. Colors House is an authentic space where rest, culture, and adventure meet in harmony in the heart of Sucre, Bolivia.
                 </p>
                 <button 
                     onclick="window.open('https://api.whatsapp.com/send/?phone=+59175451699&text=Hello%2C+I+would+like+to+get+more+information+about+the+hostel.', '_blank')"
-                    id="contact-button-school" class="mt-12 bg-primary text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition duration-300" data-aos="fade-up" data-aos-duration="1000">
+                    id="contact-button-school" class="mt-12 bg-primary text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition duration-300" data-aos="fade-up" data-aos-duration="1000">
                     Contact us for more information
                 </button>
                 
@@ -85,26 +85,36 @@
                     <h2 class="text-3xl lg:text-4xl font-bold flex items-center bg-primary py-1 px-3 "><span class="mr-2">🏡</span>Featured <span class="text-white ml-3">Hostels</span> </h2>
                 </span>
                 <p class="text-lg lg:text-lg md:text-lg text-left text-gray-700 mb-16" data-aos="fade-up" data-aos-duration="1000">
-                    At Colors House Hostal, we offer comfortable and affordable accommodation in a friendly and creative environment. Whether you’re traveling solo, as a couple, or with your family, we have the perfect room for you. All stays include free Wi-Fi and full access to our shared spaces — including a kitchen, lounge areas, and beautiful patios.
+                    At Color’s House Hostal, we offer comfortable and affordable accommodation in a friendly and creative environment. Whether you’re traveling solo, as a couple, or with your family, we have the perfect room for you. All stays include free Wi-Fi and full access to our shared spaces — including a kitchen, lounge areas, and beautiful patios.
                 </p>
                  <div class="grid grid-cols-3 w-full justip-1 gap-4 featured-rooms">
                   
-                    <div id="card-hostal" class="bg-white flex  flex-row border-primary border-2 rounded-md shadow-lg max-w-120" data-aos="fade-up">
-                        <img src="images/hostal/chocolate1.webp" alt="Suite Room" class="w-1/2 min-h-60 object-cover rounded-l-md" onclick="showModalHostal(4)" >
-                        <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
-                            <!-- <p class="text-3xl">🛁</p> -->
+                    <div id="card-hostal" class="bg-white flex flex-row border-primary border-2 rounded-md shadow-lg max-w-120" data-aos="fade-up">
+                        <div class="w-1/2 relative min-h-60" style="position: relative;">
+                            <img src="images/hostal/chocolate3.webp" alt="Suite Room" class="w-full h-full object-cover rounded-l-md" onclick="showModalHostal(4)">
+                            <span class="absolute material-symbols-outlined bg-black text-white  p-2 rounded-full m-2" style="position: absolute; bottom: 6px; right: 6px;" onclick="showModalHostal(4)">photo_library</span>
+                        </div>
+                        <div class="flex flex-col justify-start items-stretch p-4 w-1/2 min-h-60 bg-yellow-100">
                             <span class="text-lg font-semibold text-left">Queen Room</span>
                             <ul class="text-sm text-gray-800 text-left list-disc pl-4">
                                 <li>1 Queen bed</li>
                                 <li>Private bathroom (outside the room)</li>
-                                <!-- <li><strong>190 Bs/night</strong></li> -->
                             </ul>
+
+                            <!-- Esto queda abajo y centrado -->
+                            <p class="mt-auto w-full p-8 text-center text-sm text-gray-800 italic underline font-bold cursor-pointer">
+                                View more
+                            </p>
                         </div>
                     </div>
 
+
                 
                     <div id="card-hostal" class="bg-white flex flex-row border-primary border-2 rounded-md shadow-lg" data-aos="fade-up">
-                        <img src="images/hostal/terracota2.webp" alt="Family Room" class="w-1/2 min-h-60 object-cover rounded-l-md" onclick="showModalHostal(5)" >
+                        <div class="w-1/2 relative min-h-60" style="position: relative;">
+                            <img src="images/hostal/terracota2.webp" alt="Suite Room" class="w-full h-full object-cover rounded-l-md" onclick="showModalHostal(5)">
+                            <span class="absolute material-symbols-outlined bg-black text-white  p-2 rounded-full m-2" style="position: absolute; bottom: 6px; right: 6px;" onclick="showModalHostal(5)">photo_library</span>
+                        </div>
                         <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
                             <!-- <p class="text-3xl">🧸</p> -->
                             <span class="text-lg font-semibold text-left">Twin Room</span>
@@ -117,7 +127,10 @@
                     </div>
                     
                     <div id="card-hostal" class="bg-white flex border-primary border-2 rounded-md shadow-lg" data-aos="fade-up">
-                        <img src="images/hostal/naranja2.webp" alt="Matrimonial Shared" class="w-1/2 min-h-60 object-cover rounded-l-md" onclick="showModalHostal(3)" >
+                        <div class="w-1/2 relative min-h-60" style="position: relative;">
+                            <img src="images/hostal/naranja3.webp" alt="Matrimonial Shared" class="w-full h-full object-cover rounded-l-md" onclick="showModalHostal(3)" >
+                            <span class="absolute material-symbols-outlined bg-black text-white  p-2 rounded-full m-2" style="position: absolute; bottom: 6px; right: 6px;" onclick="showModalHostal(3)">photo_library</span>
+                        </div>
                         <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
                             <!-- <p class="text-3xl">👩‍❤️‍👨</p> -->
                             <span class="text-lg font-semibold text-left">Queen Room</span>
@@ -131,7 +144,11 @@
                 </div>
                 <div class="grid grid-cols-2 w-full justify-center gap-4 featured-rooms mt-8">
                     <div id="card-hostal" class="bg-white flex flex-row-reverse border-primary border-2 rounded-md shadow-lg " data-aos="fade-up" style="height: 260px;" >
-                        <img src="images/hostal/card1.webp" alt="Matrimonial Room" class="w-1/2 object-cover rounded-r-md"  onclick="showModalHostal(1)" >
+                        
+                        <div class="w-1/2 relative min-h-60" style="position: relative;">
+                            <img src="images/hostal/card1.webp" alt="Matrimonial Room" class="w-full h-full object-cover rounded-r-md"  onclick="showModalHostal(1)" >
+                            <span class="absolute material-symbols-outlined bg-black text-white  p-2 rounded-full m-2" style="position: absolute; bottom: 6px; right: 6px;" onclick="showModalHostal(1)">photo_library</span>
+                        </div>
                         <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
                             <!-- <p class="text-3xl">👨‍👩‍👧‍👦</p> -->
                             <span class="text-lg font-semibold text-left">Family Suite</span>
@@ -145,7 +162,11 @@
                         </div>
                     </div>
                     <div id="card-hostal" class="bg-white flex flex-row-reverse border-primary border-2 rounded-md shadow-lg" data-aos="fade-up" style="height: 260px;" >
-                        <img src="images/hostal/card2.webp" alt="Double Room" class="w-1/2 object-cover rounded-r-md" onclick="showModalHostal(2)" >
+
+                        <div class="w-1/2 relative min-h-60" style="position: relative;">
+                            <img src="images/hostal/card2.webp" alt="Double Room" class="w-full h-full object-cover rounded-r-md" onclick="showModalHostal(2)" >
+                            <span class="absolute material-symbols-outlined bg-black text-white  p-2 rounded-full m-2" style="position: absolute; bottom: 6px; right: 6px;" onclick="showModalHostal(2)">photo_library</span>
+                        </div>
                         <div class="flex flex-col justify-start items-start p-4 w-1/2 bg-yellow-100">
                             <!-- <p class="text-3xl">🛌 -->
                             <span class="text-lg font-semibold text-left">Family Room</span>
@@ -175,6 +196,12 @@
                     <br>
                     <!-- <strong>75 Bs/person/night</strong>              -->
                 </p>
+
+                <button 
+                    onclick="showModalHostal(7)"
+                    id="contact-button-school" class="mt-4 bg-primary text-black flex justify-center items-center px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition duration-300" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="material-symbols-outlined text-black mx-4"  onclick="showModalHostal(1)">photo_library</span> more images
+                </button>
                 
                 
             </div>
@@ -277,7 +304,7 @@
                 <iframe id="frame-maps" class="w-2/3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.318017349494!2d-65.26025760000002!3d-19.049750399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf364b2f753d%3A0xbbdc06f7e107cb7f!2sColors%20House%20Hostel!5e0!3m2!1ses-419!2sbo!4v1749512783051!5m2!1ses-419!2sbo" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <div class="bg-primary text-gray-900 text-left p-4 w-1/3 ">
-                    <p class="text-2xl font-bold">Colors House Hostal</p>
+                    <p class="text-2xl font-bold">Color’s House Hostal</p>
                     <div class="flex flex-row justify-start items-center my-1"><span class="material-symbols-outlined mr-2">pin_drop</span><p class="text-md">Calle Dalence 109, Sucre, Bolivia</p></div>
                     <div class="flex flex-row justify-start items-center my-1"
                         onclick="window.open('https://wa.me/59175451699', '_blank')"
@@ -316,7 +343,7 @@
                 <img src="images/hostal/queenroom2.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-down" />
                 <img src="images/hostal/Family2.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover" data-aos="fade-up" />
                 <img src="images/hostal/room5.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-span-2 col-start-1 row-start-2" data-aos="fade-down" />
-                <img src="images/hostal/room6.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-start-3 row-start-1" data-aos="fade-right" />
+                <img src="images/hostal/roomfamily3.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-start-3 row-start-1" data-aos="fade-right" />
                 <img src="images/hostal/twin2.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-full object-cover row-span-2 col-start-4 row-start-1" data-aos="fade-up" />
                 <img src="images/hostal/roomfamily5.webp" alt="Legend" class="rounded-xl shadow-lg border-tertiary w-full h-64 object-cover col-start-3" data-aos="fade-left" />
             </div>
@@ -356,10 +383,10 @@
             </div>
             
             <div class="bg-primary text-center pb-4 flex flex-wrap justify-center items-center gap-6 text-black">
-                <a href="index.html" target="_blank" class="text-lg hover:underline">Home</a>
+                <a href="home.html" target="_blank" class="text-lg hover:underline">Home</a>
                 <a href="adventure.html" target="_blank" class="text-lg hover:underline">Agency</a>
                 <a href="hostal.html" target="_blank" class="text-lg hover:underline">Hostel</a>
-                <a href="school.html" target="_blank" class="text-lg hover:underline">School</a>
+                <a href="index.html" target="_blank" class="text-lg hover:underline">School</a>
                 <a href="coffee.html" target="_blank" class="text-lg hover:underline">Coffee</a>
             </div>
             <div class="w-full bg-black text-center text-white py-2">
@@ -398,7 +425,7 @@
                         </div>
                     </div>
                     <button class="bg-red-500  text-2xl text-white p-2 rounded mb-12 fixed top-20 right-20 btn-close" onclick="closeModal()">
-                        <span class="material-symbols-outlined flex items-center justify-center" style="font-size: 2rem;">
+                        <span class="material-symbols-outlined flex items-center justify-center" style="font-size: 2rem; z-index: 1000;">
                             close
                         </span>
                     </button>

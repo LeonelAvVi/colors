@@ -115,11 +115,11 @@ const services = [
         {
             name: "Service Hostal Colors",
             description: "Description for Service 2",
-            bg: "images/bg-banner-hostal.webp",
+            bg: "images/hostal/roomfamily3.webp",
             image : [
-                "images/banner-hostal1.webp",
-                "images/banner-hostal2.webp",
-                "images/banner-hostal3.webp"
+                "images/hostal/naranja3.webp",
+                "images/hostal/roomfamily3.webp",
+                "images/hostal/roomshard4.webp"
             ]
         },
         {
