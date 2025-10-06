@@ -413,18 +413,23 @@ let currentIndex = 0;
 const mainImage = document.getElementById("main-image");
 const thumbnails = document.querySelectorAll(".thumbnail");
 
-function updateGallery(index) {
-currentIndex = index;
-mainImage.classList.add("opacity-0");
-
-setTimeout(() => {
+const repeat = setTimeout(() => {
     mainImage.src = imagesData[currentIndex];
     mainImage.classList.remove("opacity-0");
 }, 300);
 
-thumbnails.forEach((thumb, i) => {
-    thumb.classList.toggle("border-primary", i === currentIndex);
-});
+function updateGallery(index) {
+    currentIndex = index;
+    mainImage.classList.add("opacity-0");
+
+    setTimeout(() => {
+        mainImage.src = imagesData[currentIndex];
+        mainImage.classList.remove("opacity-0");
+    }, 300);
+
+    thumbnails.forEach((thumb, i) => {
+        thumb.classList.toggle("border-primary", i === currentIndex);
+    });
 }
 
   thumbnails.forEach((thumb, index) => {
@@ -456,9 +461,7 @@ const FamilyImage = [
 
     "images/hostal/cafe1.webp",
     "images/hostal/cafe2.webp",
-    "images/hostal/cafe3.webp",
     "images/hostal/card1.webp",
-    "images/hostal/Family1.webp",
     "images/hostal/Family2.webp",
     "images/hostal/Family3.webp",
     "images/hostal/Family4.webp"
@@ -466,13 +469,9 @@ const FamilyImage = [
 
 const familyRoomImages = [
     "images/hostal/card2.webp",
-    "images/hostal/roomfamily1.webp",
-    "images/hostal/roomfamily2.webp",
     "images/hostal/roomfamily3.webp",
     "images/hostal/roomfamily4.webp",
-    "images/hostal/roomfamily5.webp",
-    "images/hostal/roomfamily6.webp",
-    "images/hostal/roomfamily7.webp"
+    "images/hostal/roomfamily5.webp"
 ]
 
 const queenRoomImages = [
