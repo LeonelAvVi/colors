@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
         <link rel="stylesheet" href="./src/output.css" >
-        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/stylesV1.css" />
     </head>
     <body>
         <!-- NAVBAR -->
@@ -213,7 +213,7 @@
 
                 <div id="items-perks" class=" mx-auto text-center py-16 my-12 gap-4 flex flex-wrap justify-center z-0">
                     <div class="group relative overflow-hidden bg-white border-secondary rounded-xl shadow flex flex-col items-center p-4 max-w-64 min-w-64 transition-all duration-300" data-aos="fade-up" style="border-width: 1px;">
-                        <p class="text-5xl z-10">🛜</p>
+                        <p class="text-5xl z-10">🌐</p>
                         <h3 class="text-lg font-semibold my-2 text-black text-center z-10">Free Wi-Fi</h3>
                     </div>
 
@@ -399,10 +399,14 @@
                     <div class="p-4 flex flex-col items-center">                        
                        <div class="max-w-3xl mx-auto">
                         <!-- Imagen principal -->
-                        <div class="relative">
-                            <img id="main-image" src="images/activity1.webp" alt="Gallery" 
-                            class="w-full h-96 object-cover rounded-lg transition-all duration-700 ease-in-out" />
-                        </div>
+                        <div class="relative w-full h-96 bg-black flex justify-center items-center overflow-hidden rounded-lg">
+                            <img 
+                                id="main-image" 
+                                src="images/activity1.webp" 
+                                alt="Gallery" 
+                                class="h-full w-auto object-contain transition-all duration-700 ease-in-out" 
+                            />
+                            </div>
 
                         <!-- Miniaturas -->
                         <div id="thumbnail-description" class="flex justify-center space-x-3 mt-4 modal-gallery-thumbnails">
@@ -443,7 +447,7 @@
             Need help? 👀
         </div>
         
-        <script src="js/indexVf.js"></script>
+        <script src="js/index.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();

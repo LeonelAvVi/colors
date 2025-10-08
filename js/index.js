@@ -462,7 +462,6 @@ const FamilyImage = [
     "images/hostal/cafe1.webp",
     "images/hostal/cafe2.webp",
     "images/hostal/card1.webp",
-    "images/hostal/Family2.webp",
     "images/hostal/Family3.webp",
     "images/hostal/Family4.webp"
 ]
@@ -484,7 +483,7 @@ const queenRoomTwoImages = [
     // "images/hostal/card4.webp",
     "images/hostal/queenroom1.webp",
     "images/hostal/chocolate1.webp",
-    "images/hostal/chocolate2.webp",
+    
     "images/hostal/chocolate3.webp",
 
     // "images/hostal/queenroom2.webp",
