@@ -39,8 +39,8 @@
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 font-semibold mb-2">Student Name:<span style="color: #ff0000;" >*</span></label>
                 <div class="flex row gap-4" >
-                    <input type="email" id="first-name" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="First name">
-                    <input type="email" id="surname" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Last name">
+                    <input type="text" id="first-name" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="First name">
+                    <input type="text" id="surname" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Last name">
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
                 <input type="text" id="country" name="country" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Country">
             </div>
 
-            <div class="mb-4 w-full">
+            <div class="mb-4 w-full p-2">
                 <label for="name" class="block text-gray-700 font-semibold mb-2">Student Level:<span style="color: #ff0000;" >*</span></label>
                 <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" data-component="dropdown" required="" aria-label="STUDENT LEVEL">
                     <option value="">Please Select</option>
@@ -239,13 +239,15 @@
                 </button>
 
                 <button 
+                    type="submit"
                     onclick="window.location.href = 'mailto:colorshousesucre@gmail.com?subject=PDF generado&body=Adjunto el PDF que acabo de generar.'"
                     id="contact-button-school" class="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-4 rounded-md hover:bg-green-600 transition duration-300">
                     Contact Us via Email
                 </button>
 
-                <button type="button"
+                <button type="submit"
                     onclick="sendWhatsApp()"
+                    id="send-message-whatsapp"
                     class="mt-4 w-full bg-green-500 text-white font-bold py-2 px-4 rounded-md hover:bg-green-600 transition duration-300">
                     Send via WhatsApp
                 </button>
@@ -261,14 +263,20 @@
 
             const formContainer = document.getElementById('form-container');
             const submitButton = document.getElementById('save-pdf-btn');
+            const contactButton = document.getElementById('contact-button-school');
+            const whatsappButton = document.getElementById('send-message-whatsapp');
 
             // Oculta el botón para que no aparezca en la captura del PDF
             submitButton.style.display = 'none';
+            contactButton.style.display = 'none';
+            whatsappButton.style.display = 'none';
 
             // Captura el elemento del formulario y lo convierte en un canvas (imagen)
             html2canvas(formContainer, { scale: 2 }).then(canvas => {
                 // Restaura el botón a su estado original
                 submitButton.style.display = 'block';
+                contactButton.style.display = 'block';
+                whatsappButton.style.display = 'block';
 
                 // Convierte el canvas a una URL de imagen base64
                 const imgData = canvas.toDataURL('image/png');
@@ -284,7 +292,7 @@
                 pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
                 
                 // Guarda el archivo PDF en el dispositivo del usuario
-                pdf.save("formulario_de_prueba.pdf");
+                pdf.save("formulario_de_registro.pdf");
 
                 // Muestra una alerta de confirmación
                 setTimeout(() => {
