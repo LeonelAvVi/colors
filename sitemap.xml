@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Raíz / Inicio -->
+  <url>
+    <loc>https://www.spanishlessonsbolivia.com/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Home: resumen de todos los servicios (escuela, hostal, agencia, café) -->
+  <url>
+    <loc>https://www.spanishlessonsbolivia.com/home.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- School: Escuela de Español (página principal de programas e inmersión) -->
+  <url>
+    <loc>https://www.spanishlessonsbolivia.com/index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Hostel: alojamiento para estudiantes de la escuela -->
+  <url>
+    <loc>https://www.spanishlessonsbolivia.com/hostal.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Agency: tours y excursiones para estudiantes -->
+  <url>
+    <loc>https://www.spanishlessonsbolivia.com/adventure.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Coffee: café bistró para estudiantes -->
+  <url>
+    <loc>https://www.spanishlessonsbolivia.com/coffee.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contacto y reservas -->
+  <url>
+    <loc>https://www.spanishlessonsbolivia.com/contact.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Formulario de inscripción / registro -->
+  <url>
+    <loc>https://www.spanishlessonsbolivia.com/form.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>

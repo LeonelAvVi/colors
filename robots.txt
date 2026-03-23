@@ -1,0 +1,8 @@
+# Robots.txt para SpanishLessonsBolivia
+# Escuela de Español en Sucre, Bolivia
+
+User-agent: *
+Allow: /
+
+# Sitemap: mapa del sitio para motores de búsqueda
+Sitemap: https://www.spanishlessonsbolivia.com/sitemap.xml
